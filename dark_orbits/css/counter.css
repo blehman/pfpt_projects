@@ -1,0 +1,9 @@
+#progress-axis line{
+  stroke: #bdbdc1;
+}
+#progress-axis path{
+  stroke: #bdbdc1;
+}
+#progress-axis text{
+  fill: #bdbdc1;
+}

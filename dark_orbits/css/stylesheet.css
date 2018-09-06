@@ -1,0 +1,222 @@
+@font-face {
+    font-family: "BebasNeue Bold";
+    src: url("../Proofpoint-Fonts/BebasNeue/BebasNeue\ Bold.ttf") ;
+}
+
+@font-face {
+    font-family: "BebasNeue Regular";
+    src: url("../Proofpoint-Fonts/BebasNeue/BebasNeue\ Regular.ttf") ;
+}
+
+.at-share-btn{}
+.at-svc-twitter{}
+.at4-visually-hidden{}
+.at-icon-wrapper{}
+.at-icon .at-icon-twitter{}
+.at-svg-twitter-2{}
+
+
+:root {
+  --hover-col:#E8336D;
+  /*--hover-col:#E8336D;*/
+  /*var(--hover-col);*/
+}
+.testing_pallate {
+  .activation: #ad6364,
+  .highlight-against-gray: #3e3b35,
+  .stable:#6ab39b,
+  .col1: #80bd88,
+  .col2: #d3b67c,
+  .col3: #5eaec0,
+  .col4: #986535,
+  .col5: #56542d,
+  .col6: #b9b09e,
+  .col7: #97ac63,
+  .col8: #FC8E08;
+}
+#main-body{
+}
+#viz-container {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  vertical-align: top;
+  overflow: hidden;
+}
+#viz-svg{
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  /*height: 100%;*/
+  /*padding-bottom: 100%;*/
+  vertical-align: top;
+  overflow: hidden;
+}
+#viz{
+/*
+  onmouseover="document.body.style.overflow='hidden';"
+  onmouseout="document.body.style.overflowY='auto'; document.body.style.overflowX='hidden';"
+  preserveAspectRatio="xMinYMin meet"
+  width="650"
+  height="550"
+  viewBox= "0 0 650 550"
+*/
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#legend{
+}
+#outro{
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+  /*font-family: 'Roboto';*/
+}
+/*
+Canvas Fonts
+*/
+.canvas-fonts {
+  font-family: 'Bungee Hairline', cursive;
+  font-family: 'Share Tech Mono', monospace;
+  font-family: 'Raleway Dots', cursive;
+}
+/*
+  Main
+*/
+.mainBody-background{
+  background-color: #2B3033;
+}
+/*
+  Container
+*/
+.container-stroke{
+  stroke:#767678;
+}
+/*
+  title
+*/
+.title-font-family{
+  font-family: "BebasNeue Bold",'Bungee Inline', cursive;
+  vertical-align: middle;
+}
+.title-size-font{
+  font-size: 35px;
+  font-weight: bold;
+  line-height: 1em;
+  padding-top:1.4%;
+  letter-spacing: 0.06em;
+}
+.title-color-font{
+  color: #2B3033;
+}
+.title-color-background{
+  background:#6D6E71;
+}
+
+.title-img-background{
+
+  background-image: url("../img/pfpt-banner-marketing-central-orange.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 1;
+}
+.title-border-radius{
+  border-radius: 10px;
+  /*border: 2px solid #FC8E08;*/
+  border: 2px solid #f17735;
+}
+/*
+  font
+*/
+.general-font-family{
+  font-family: "Helvetica", "BebasNeue Regular",'Cousine', 'Space Mono','Press Start 2P', 'Gugi';
+}
+
+.general-size-font{
+  font-size: 25px;
+  /*letter-spacing: 0.07em;*/
+  /*line-height: 7vw;*/
+}
+
+.general-color-font{
+  color:#bdbdc1;
+  fill: #bdbdc1;
+}
+.general-text-align{
+  text-align: left;
+}
+
+.small-size-font{
+  font-size: 10;
+  letter-spacing: 0.07em;
+}
+
+@media screen and (max-width: 600px) {
+  .general-size-font{
+    font-size: 15px;
+  }
+  .title-size-font{
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 1em;
+    padding-top:1.4%;
+    letter-spacing: 0.06em;
+  }
+}
+/*
+  objects
+*/
+.vizObj-General-outline{
+  stroke:#bdbdc1;
+}
+.vizObj-Stable-optional{
+  stroke: #6ab39b;
+}
+.vizObj-Active-stroke{
+  stroke: #ad6364;
+}
+.vizObj-col1{
+  fill: #80bd88;
+}
+.vizObj-col2{
+  fill: #d3b67c;
+}
+.vizObj-col3{
+  fill: #5eaec0;
+}
+
+#call-to-action{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+  width: 300px;
+  text-align: center;
+  margin-top: 20px;
+  opacity:1.0;
+  position: relative;
+  z-index:1;
+  font-family: "BebasNeue Regular";
+  letter-spacing: 0.06em;
+  font-size: 25px;
+}
+/*
+#call-to-action::before{
+  content: "";
+  position: absolute;
+  opacity: 0.0;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: transparent;
+}
+*/
+#call-to-action:hover{
+  transition: background-color 0.5s ease;
+  background-color: #e35a10
+}

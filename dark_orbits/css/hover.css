@@ -1,0 +1,33 @@
+#invisible-circle{
+  fill: rgba(246, 43, 15, 0.0);
+  stroke: rgba(246, 43, 15, 0.0);
+}
+:root {
+  --hover-col:#E8336D;
+  /*--hover-col:#E8336D;*/
+  /*--hover-col: rgba(157, 240, 18, 0.40);*/
+}
+.dark-orbit{
+  stroke-width: 2px;
+  stroke: var(--hover-col);
+  fill: none;
+  stroke-dasharray: 5,5;
+}
+
+
+.radius-scale-axis line{
+  stroke: var(--hover-col);
+}
+
+.radius-scale-axis path{
+  stroke: var(--hover-col);
+}
+
+.radius-scale-axis text{
+  fill: var(--hover-col);
+}
+
+.arrow {
+  stroke: var(--hover-col);
+  fill: var(--hover-col);
+}

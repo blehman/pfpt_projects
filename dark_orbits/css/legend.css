@@ -1,0 +1,24 @@
+#gradient-text{
+  text-anchor:middle;
+}
+.legend-text{
+  alignment-baseline: middle;
+  text-anchor:start;
+  font-size: 1.5VW;
+}
+
+.progress-text{
+  alignment-baseline: middle;
+  text-anchor:start;
+  font-size: 1.5VW;
+}
+
+.axis path,
+.axis line,
+.axis {
+
+  fill: none;
+  stroke: #bdbdc1;
+
+  shape-rendering: crispEdges;
+}

@@ -1,0 +1,501 @@
+bucket_id,dkim_alignment,dkim_pass_fail,geoip,ip_address,ip_reputation,max_auth_date,message_count,sender_display_name,sender_id,spf_alignment,spf_pass_fail,viz_group
+1,1,1,United States,1,50,4/25/18,505168,-1,-1,1,1,G1-SPF-Record
+1,1,1,United States,2,50,4/25/18,506662,-1,-1,1,1,G1-SPF-Record
+5,1,1,United States,3,16,4/16/18,39,-1,-1,1,0,G3-Rep-Risk
+1,1,1,United States,4,0,4/25/18,291105,-1,-1,1,1,G1-SPF-Record
+1,1,1,United States,5,0,4/25/18,286037,-1,-1,1,1,G1-SPF-Record
+1,1,1,United States,6,50,4/25/18,741961,-1,-1,1,1,G1-SPF-Record
+1,1,1,United States,7,50,4/25/18,511650,-1,-1,1,1,G1-SPF-Record
+3,1,0,United States,8,50,4/25/18,260392,Google,100,1,0,G2-Known-Sender
+4,-1,-1,United States,9,50,4/25/18,8458,-1,-1,1,0,G4-Unknown
+3,0,1,United States,10,1,4/25/18,7953,Amazon,9,0,1,G2-Known-Sender
+5,1,1,United States,11,0,4/3/18,22,Website Welcome,499,1,0,G2-Known-Sender
+4,0,1,United States,12,1,4/25/18,8305,Amazon,9,0,1,G2-Known-Sender
+4,0,1,United States,13,1,4/25/18,8200,Amazon,9,0,1,G2-Known-Sender
+4,0,1,United States,14,1,4/25/18,8202,Amazon,9,0,1,G2-Known-Sender
+3,0,1,United States,15,1,4/25/18,8300,Amazon,9,0,1,G2-Known-Sender
+3,0,1,United States,16,50,4/25/18,1105,Google,100,0,1,G2-Known-Sender
+4,0,1,United States,17,50,4/25/18,8244,Amazon,9,0,1,G2-Known-Sender
+4,0,1,United States,18,1,4/25/18,8157,Amazon,9,0,1,G2-Known-Sender
+4,0,1,United States,19,50,4/25/18,8349,Amazon,9,0,1,G2-Known-Sender
+4,0,1,United States,20,1,4/25/18,8099,Amazon,9,0,1,G2-Known-Sender
+4,0,1,United States,21,50,4/25/18,8031,Amazon,9,0,1,G2-Known-Sender
+3,0,1,United States,22,1,4/25/18,8122,Amazon,9,0,1,G2-Known-Sender
+4,-1,-1,United States,23,50,4/21/18,2807,-1,-1,0,1,G4-Unknown
+4,0,1,United States,24,50,4/25/18,7864,Amazon,9,0,1,G2-Known-Sender
+3,0,1,United States,25,1,4/25/18,8136,Amazon,9,0,1,G2-Known-Sender
+5,1,1,United States,26,0,4/25/18,90,-1,-1,1,0,G3-Rep-Risk
+3,0,1,United States,27,50,4/25/18,46558,Google,100,0,-1,G2-Known-Sender
+4,1,0,United States,28,49,4/25/18,69,-1,-1,1,0,G4-Unknown
+4,0,1,United States,29,1,4/25/18,8137,Amazon,9,0,1,G2-Known-Sender
+5,1,1,United States,30,50,4/11/18,1,Microsoft,136,0,1,G2-Known-Sender
+4,0,1,United States,31,1,4/25/18,8227,Amazon,9,0,1,G2-Known-Sender
+5,1,1,United States,32,50,4/23/18,45,Yahoo,647,1,0,G2-Known-Sender
+4,0,1,United States,33,50,4/25/18,8203,Amazon,9,0,1,G2-Known-Sender
+4,0,1,United States,34,49,4/25/18,8072,Amazon,9,0,1,G2-Known-Sender
+4,0,1,United States,35,1,4/25/18,8039,Amazon,9,0,1,G2-Known-Sender
+4,0,1,United States,36,1,4/25/18,8412,Amazon,9,0,1,G2-Known-Sender
+5,1,1,United States,37,0,4/20/18,7,-1,-1,1,0,G3-Rep-Risk
+4,0,1,United States,38,1,4/25/18,7995,Amazon,9,0,1,G2-Known-Sender
+4,0,1,United States,39,1,4/25/18,8234,Amazon,9,0,1,G2-Known-Sender
+4,0,1,United States,40,1,4/25/18,8133,Amazon,9,0,1,G2-Known-Sender
+4,1,0,United States,41,50,4/25/18,91,Cisco,304,1,0,G2-Known-Sender
+5,1,1,United States,42,50,4/25/18,209,Web.com,679,1,0,G2-Known-Sender
+3,0,1,United States,43,1,4/25/18,8118,Amazon,9,0,1,G2-Known-Sender
+5,1,1,United States,44,50,4/25/18,545,Web.com,679,1,0,G2-Known-Sender
+5,1,1,United States,45,50,4/25/18,134,Microsoft,136,0,1,G2-Known-Sender
+4,-1,-1,Russia,46,100,3/9/18,10,-1,-1,1,0,G4-Unknown
+4,0,1,United States,47,1,4/25/18,8149,Amazon,9,0,1,G2-Known-Sender
+5,1,1,United States,48,16,4/25/18,450,-1,-1,1,0,G3-Rep-Risk
+5,1,1,United States,49,50,4/25/18,132,Microsoft,136,0,1,G2-Known-Sender
+5,1,1,United States,50,-1,4/25/18,80,Comcast,469,1,0,G2-Known-Sender
+4,0,1,United States,51,1,4/25/18,8110,Amazon,9,0,1,G2-Known-Sender
+4,0,1,United States,52,1,4/25/18,8240,Amazon,9,0,1,G2-Known-Sender
+5,1,1,United States,53,50,4/25/18,477,Web.com,679,1,0,G2-Known-Sender
+4,0,1,United States,54,1,4/25/18,8121,Amazon,9,0,1,G2-Known-Sender
+3,0,1,United States,55,1,4/25/18,8239,Amazon,9,0,1,G2-Known-Sender
+4,0,1,United States,56,16,4/25/18,8284,Amazon,9,0,1,G2-Known-Sender
+5,1,1,United States,57,50,4/25/18,76,Massachusetts Institute of Technology,367,1,0,G2-Known-Sender
+5,1,1,United States,58,50,4/25/18,132,Microsoft,136,0,1,G2-Known-Sender
+4,0,1,United States,59,1,4/25/18,8134,Amazon,9,0,1,G2-Known-Sender
+3,0,1,United States,60,50,4/25/18,1954,1&1 Internet,308,0,-1,G2-Known-Sender
+4,-1,-1,-1,61,-1,4/24/18,174,Amazon,9,1,0,G2-Known-Sender
+4,1,0,United States,62,16,4/24/18,155,-1,-1,0,-1,G3-Rep-Risk
+3,0,1,United States,63,1,4/25/18,8125,Amazon,9,0,1,G2-Known-Sender
+4,0,1,United States,64,50,4/25/18,8211,Amazon,9,0,1,G2-Known-Sender
+5,1,1,United States,65,50,4/24/18,83,Google,100,0,1,G2-Known-Sender
+5,1,1,United States,66,50,4/25/18,101,Microsoft,136,0,1,G2-Known-Sender
+5,1,1,United States,67,50,4/25/18,3624,-1,-1,0,-1,G4-Unknown
+4,0,1,United States,68,50,2/14/18,9682,-1,-1,0,1,G4-Unknown
+4,0,1,United States,69,1,4/25/18,8054,Amazon,9,0,1,G2-Known-Sender
+5,1,1,United States,70,49,4/25/18,835,Proofpoint,167,0,1,G2-Known-Sender
+5,1,1,United States,71,16,4/25/18,165,-1,-1,1,0,G3-Rep-Risk
+4,-1,-1,Mauritius,72,49,4/24/18,75,-1,-1,0,1,G4-Unknown
+5,1,1,United States,73,0,4/23/18,462,-1,-1,1,0,G3-Rep-Risk
+4,0,1,United States,74,1,4/25/18,8243,Amazon,9,0,1,G2-Known-Sender
+3,0,1,United States,75,1,4/25/18,8096,Amazon,9,0,1,G2-Known-Sender
+5,1,1,United States,76,49,4/4/18,84,Endurance International Group,487,0,1,G2-Known-Sender
+5,1,1,United States,77,50,4/2/18,110,Yahoo,647,1,0,G2-Known-Sender
+3,0,1,United States,78,50,4/25/18,1175,Google,100,0,1,G2-Known-Sender
+4,0,1,United States,79,1,4/25/18,8313,Amazon,9,0,1,G2-Known-Sender
+5,1,1,United States,80,16,4/18/18,2277,-1,-1,0,1,G3-Rep-Risk
+4,1,0,United States,81,50,3/12/18,4,Microsoft,136,1,0,G2-Known-Sender
+4,0,1,United States,82,1,4/25/18,8065,Amazon,9,0,1,G2-Known-Sender
+3,0,1,United States,83,1,4/25/18,8210,Amazon,9,0,1,G2-Known-Sender
+4,0,1,United States,84,1,4/25/18,8108,Amazon,9,0,1,G2-Known-Sender
+4,0,1,United States,85,1,4/25/18,8172,Amazon,9,0,1,G2-Known-Sender
+4,0,1,United States,86,1,4/25/18,8100,Amazon,9,0,1,G2-Known-Sender
+5,1,1,United States,87,50,4/25/18,19,Microsoft,136,0,1,G2-Known-Sender
+5,1,1,United States,88,-1,4/23/18,92,Comcast,469,1,0,G2-Known-Sender
+5,1,1,United States,89,50,4/23/18,15,Microsoft,136,0,1,G2-Known-Sender
+5,1,1,United States,90,50,4/25/18,477,Go Daddy,98,0,1,G2-Known-Sender
+3,0,1,United States,91,1,4/25/18,8172,Amazon,9,0,1,G2-Known-Sender
+5,1,1,United States,92,-1,4/24/18,24,Google,100,0,1,G2-Known-Sender
+4,0,1,United States,93,50,4/13/18,14,Microsoft,136,0,1,G2-Known-Sender
+4,-1,-1,United States,94,50,4/25/18,1479,-1,-1,0,-1,G4-Unknown
+4,1,0,United States,95,50,4/25/18,4044,Rackspace,538,1,0,G2-Known-Sender
+5,1,1,United States,96,50,4/25/18,179,Go Daddy,98,0,1,G2-Known-Sender
+4,0,-1,United States,97,0,4/11/18,16,-1,-1,0,1,G3-Rep-Risk
+5,1,1,United States,98,50,4/25/18,115,Microsoft,136,0,1,G2-Known-Sender
+4,0,1,United States,99,1,4/25/18,7330,Amazon,9,0,1,G2-Known-Sender
+5,1,1,United States,100,-1,3/20/18,4,-1,-1,1,0,G3-Rep-Risk
+5,1,1,United States,101,1,4/25/18,77,Proofpoint,167,1,0,G2-Known-Sender
+3,1,0,United States,102,-1,4/11/18,1,Microsoft,136,1,0,G2-Known-Sender
+3,0,1,United States,103,50,4/25/18,290,Google,100,0,1,G2-Known-Sender
+4,0,1,United States,104,1,4/25/18,8111,Amazon,9,0,1,G2-Known-Sender
+5,1,1,United States,105,50,4/16/18,28,Microsoft,136,0,1,G2-Known-Sender
+3,0,1,United States,106,50,4/25/18,8,Google,100,0,1,G2-Known-Sender
+5,1,1,United States,107,50,4/25/18,63,Google,100,0,1,G2-Known-Sender
+5,1,1,United States,108,50,4/25/18,557,Go Daddy,98,0,1,G2-Known-Sender
+5,1,1,United States,109,50,4/25/18,451,-1,-1,1,0,G4-Unknown
+3,0,1,United States,110,50,4/25/18,1050,Google,100,0,-1,G2-Known-Sender
+3,0,1,United States,111,50,4/25/18,1219,Google,100,0,1,G2-Known-Sender
+3,0,1,United States,112,50,4/25/18,1236,Google,100,0,1,G2-Known-Sender
+5,1,1,United States,113,50,4/25/18,135,Go Daddy,98,0,1,G2-Known-Sender
+4,-1,-1,Colombia,114,100,12/30/17,214,-1,-1,0,-1,G4-Unknown
+5,1,1,United States,115,49,4/25/18,220,-1,-1,1,0,G4-Unknown
+5,1,1,United States,116,49,4/16/18,10,-1,-1,0,-1,G4-Unknown
+4,-1,-1,Kazakhstan,117,100,3/29/18,47,-1,-1,0,0,G4-Unknown
+3,1,0,United Kingdom,118,-1,4/25/18,35,Microsoft,136,1,0,G2-Known-Sender
+5,1,1,United States,119,50,4/25/18,324,Go Daddy,98,0,1,G2-Known-Sender
+5,1,1,United States,120,50,4/2/18,50,Yahoo,647,1,0,G2-Known-Sender
+4,1,0,United States,121,16,4/25/18,245,-1,-1,0,-1,G3-Rep-Risk
+4,1,0,United States,122,49,4/25/18,2572,-1,-1,0,-1,G4-Unknown
+5,1,1,United States,123,50,4/21/18,248,Go Daddy,98,0,1,G2-Known-Sender
+5,1,1,United States,124,50,4/25/18,89,DreamHost,667,1,0,G2-Known-Sender
+4,1,0,United States,125,16,4/25/18,338,-1,-1,0,-1,G3-Rep-Risk
+4,-1,-1,United States,126,49,2/12/18,109,Endurance International Group,487,0,1,G2-Known-Sender
+5,1,1,United Kingdom,127,-1,3/29/18,5,Microsoft,136,0,1,G2-Known-Sender
+4,0,1,United States,128,1,4/25/18,8157,Amazon,9,0,1,G2-Known-Sender
+4,0,1,United States,129,50,4/25/18,8206,Amazon,9,0,1,G2-Known-Sender
+4,-1,-1,United States,130,50,4/25/18,56,Go Daddy,98,0,1,G2-Known-Sender
+5,1,1,United States,131,49,3/22/18,11,Endurance International Group,487,0,1,G2-Known-Sender
+3,0,1,United States,132,1,4/25/18,8171,Amazon,9,0,1,G2-Known-Sender
+4,0,0,United States,133,0,4/14/18,6,Microsoft,136,1,0,G2-Known-Sender
+4,0,1,United States,134,1,4/25/18,8300,Amazon,9,0,1,G2-Known-Sender
+4,-1,-1,United States,135,16,4/25/18,1301,Amazon,9,0,1,G2-Known-Sender
+5,1,1,United States,136,50,4/25/18,108,Microsoft,136,0,1,G2-Known-Sender
+5,1,1,United States,137,49,3/9/18,464,-1,-1,1,0,G4-Unknown
+5,1,1,United States,138,50,4/25/18,521,Web.com,679,1,0,G2-Known-Sender
+4,1,0,United States,139,50,4/25/18,19,Microsoft,136,0,1,G2-Known-Sender
+5,1,1,United States,140,1,4/17/18,75,Time Warner,714,0,0,G2-Known-Sender
+4,0,1,United States,141,1,4/25/18,8202,Amazon,9,0,1,G2-Known-Sender
+4,1,1,-1,142,-1,3/21/18,1623,-1,-1,1,1,G3-Rep-Risk
+5,1,1,United States,143,50,4/25/18,195,Cox Communications,664,1,0,G2-Known-Sender
+5,1,1,United States,144,50,4/18/18,17,Google,100,0,1,G2-Known-Sender
+5,1,1,United States,145,-1,4/14/18,7,Google,100,0,1,G2-Known-Sender
+4,1,0,United States,146,16,4/25/18,204,-1,-1,0,1,G3-Rep-Risk
+4,-1,-1,United Kingdom,147,50,2/5/18,1,-1,-1,0,0,G4-Unknown
+4,-1,-1,United States,148,49,4/23/18,404,-1,-1,1,0,G4-Unknown
+5,1,1,United States,149,50,4/19/18,56,Website Welcome,499,1,0,G2-Known-Sender
+4,0,1,United States,150,50,4/20/18,33,Microsoft,136,0,1,G2-Known-Sender
+5,1,1,United States,151,50,4/4/18,12,Microsoft,136,1,0,G2-Known-Sender
+4,1,0,United States,152,50,4/11/18,13,-1,-1,1,0,G4-Unknown
+5,1,1,United States,153,100,4/18/18,5,-1,-1,1,0,G4-Unknown
+5,1,1,Canada,154,50,4/13/18,22,-1,-1,1,0,G4-Unknown
+5,1,1,United States,155,50,4/25/18,499,Web.com,679,1,0,G2-Known-Sender
+4,0,1,United States,156,16,4/24/18,1480,-1,-1,0,1,G3-Rep-Risk
+5,1,1,United States,157,-1,4/6/18,2,Microsoft,136,1,0,G2-Known-Sender
+5,1,1,United States,158,1,4/25/18,58,Time Warner,714,0,-1,G2-Known-Sender
+5,1,1,United States,159,16,4/9/18,21,-1,-1,1,0,G3-Rep-Risk
+4,-1,-1,United States,160,16,3/21/18,2628,-1,-1,0,-1,G3-Rep-Risk
+4,1,0,United States,161,50,3/24/18,3663,-1,-1,0,1,G4-Unknown
+3,1,0,United States,162,50,4/21/18,90,-1,-1,0,-1,G4-Unknown
+5,1,1,United States,163,50,4/25/18,177,Google,100,0,0,G2-Known-Sender
+4,-1,-1,United States,164,16,4/4/18,6,-1,-1,0,-1,G3-Rep-Risk
+5,1,1,United States,165,50,4/7/18,25,Microsoft,136,0,1,G2-Known-Sender
+5,1,1,United States,166,50,4/24/18,26,Microsoft,136,0,1,G2-Known-Sender
+5,1,1,United States,167,50,4/24/18,123,Microsoft,136,0,-1,G2-Known-Sender
+5,1,1,United States,168,49,4/25/18,3168,-1,-1,1,0,G4-Unknown
+3,0,1,United States,169,1,4/25/18,8246,Amazon,9,0,1,G2-Known-Sender
+5,1,1,United States,170,1,4/25/18,871,Proofpoint,167,0,1,G2-Known-Sender
+4,0,1,United States,171,1,4/25/18,8175,Amazon,9,0,1,G2-Known-Sender
+5,1,1,United States,172,50,4/25/18,563,Go Daddy,98,0,1,G2-Known-Sender
+5,1,1,United States,173,50,4/25/18,73,Go Daddy,98,0,1,G2-Known-Sender
+4,-1,-1,Germany,174,49,3/16/18,8,-1,-1,0,0,G4-Unknown
+5,1,1,United States,175,-1,3/31/18,6,-1,-1,1,0,G3-Rep-Risk
+4,-1,-1,United States,176,49,2/5/18,1,-1,-1,1,0,G4-Unknown
+5,1,1,United States,177,-1,3/30/18,6,Google,100,0,1,G2-Known-Sender
+5,1,1,United States,178,16,4/23/18,2320,-1,-1,1,0,G3-Rep-Risk
+4,-1,-1,United States,179,0,1/20/18,221,-1,-1,0,-1,G3-Rep-Risk
+4,0,1,United States,180,50,4/25/18,102,-1,-1,0,0,G4-Unknown
+5,1,1,United States,181,50,4/25/18,175,Cox Communications,664,1,0,G2-Known-Sender
+5,1,1,United States,182,50,4/4/18,34,Go Daddy,98,0,-1,G2-Known-Sender
+5,1,1,United States,183,50,4/25/18,516,Web.com,679,1,0,G2-Known-Sender
+4,0,1,United States,184,1,4/25/18,8149,Amazon,9,0,1,G2-Known-Sender
+5,1,1,United States,185,50,4/24/18,29,-1,-1,1,0,G4-Unknown
+5,1,1,United States,186,49,4/25/18,158,Google,100,0,0,G2-Known-Sender
+5,1,1,United States,187,50,3/9/18,32,Endurance International Group,487,0,1,G2-Known-Sender
+4,-1,-1,United States,188,-1,4/25/18,1521,-1,-1,1,0,G3-Rep-Risk
+5,1,1,United States,189,50,4/20/18,68,Google,100,0,1,G2-Known-Sender
+3,0,1,United States,190,50,4/25/18,1173,Google,100,0,1,G2-Known-Sender
+5,1,1,United States,191,49,3/21/18,3,-1,-1,0,0,G4-Unknown
+2,1,-1,United States,192,50,4/25/18,1860,ServiceNow,187,1,1,G1-SPF-Record
+5,1,1,United States,193,-1,4/16/18,3,Google,100,0,1,G2-Known-Sender
+5,1,1,United States,194,50,4/16/18,16,Microsoft,136,0,1,G2-Known-Sender
+4,1,0,United States,195,50,2/27/18,16,Barracuda,451,0,1,G2-Known-Sender
+4,-1,-1,United States,196,-1,4/25/18,1514,-1,-1,1,0,G3-Rep-Risk
+5,1,1,United States,197,50,4/25/18,666,Web.com,679,1,0,G2-Known-Sender
+4,-1,-1,United States,198,100,1/25/18,88,-1,-1,1,0,G4-Unknown
+5,1,1,United States,199,50,4/25/18,473,Web.com,679,1,0,G2-Known-Sender
+5,1,1,United States,200,49,4/15/18,17,Microsoft,136,0,1,G2-Known-Sender
+5,1,1,United States,201,50,4/20/18,138,Google,100,0,0,G2-Known-Sender
+5,1,1,United States,202,0,4/25/18,2727,-1,-1,1,0,G3-Rep-Risk
+4,-1,-1,Netherlands,203,49,1/16/18,48,-1,-1,1,0,G4-Unknown
+5,1,1,United States,204,50,4/25/18,102,Go Daddy,98,0,1,G2-Known-Sender
+5,1,1,United States,205,50,4/25/18,13,Go Daddy,98,0,1,G2-Known-Sender
+4,1,0,United States,206,50,4/22/18,6,Microsoft,136,1,0,G2-Known-Sender
+3,1,0,United States,207,50,4/4/18,3,-1,-1,0,1,G4-Unknown
+5,1,1,United States,208,50,4/16/18,28,Microsoft,136,0,1,G2-Known-Sender
+3,0,1,United States,209,50,4/25/18,149,Google,100,0,1,G2-Known-Sender
+5,1,1,United States,210,50,4/25/18,350,Go Daddy,98,0,1,G2-Known-Sender
+5,1,1,United States,211,49,4/6/18,4,Endurance International Group,487,0,-1,G2-Known-Sender
+3,0,1,Belgium,212,-1,4/25/18,58,Google,100,0,0,G2-Known-Sender
+4,-1,-1,United States,213,50,4/25/18,115,Microsoft,136,0,1,G2-Known-Sender
+4,1,0,United States,214,49,4/17/18,50,Verizon,219,1,0,G2-Known-Sender
+4,-1,-1,United States,215,50,4/19/18,113,Go Daddy,98,0,-1,G2-Known-Sender
+5,1,1,United States,216,100,4/23/18,78,-1,-1,0,-1,G4-Unknown
+4,0,1,United States,217,50,4/25/18,33,Microsoft,136,0,1,G2-Known-Sender
+5,1,1,United States,218,50,4/25/18,158,Yahoo,647,1,0,G2-Known-Sender
+5,1,1,United States,219,50,4/25/18,209,Go Daddy,98,0,1,G2-Known-Sender
+5,1,1,Canada,220,50,4/25/18,736,Tucows,559,0,1,G2-Known-Sender
+5,1,1,United States,221,50,4/25/18,79,Go Daddy,98,0,1,G2-Known-Sender
+5,1,1,United States,222,50,4/25/18,1905,1&1 Internet,308,0,-1,G2-Known-Sender
+5,1,1,Canada,223,49,4/24/18,18,MailChannels,514,1,0,G2-Known-Sender
+5,1,1,United States,224,50,4/25/18,10,Google,100,0,1,G2-Known-Sender
+5,1,1,United States,225,50,4/25/18,512,Web.com,679,1,0,G2-Known-Sender
+4,-1,-1,United States,226,50,1/18/18,91,-1,-1,0,-1,G4-Unknown
+4,-1,-1,United States,227,100,1/25/18,36,-1,-1,1,0,G4-Unknown
+5,1,1,United States,228,50,4/23/18,27,-1,-1,1,0,G4-Unknown
+5,1,1,United States,229,0,4/24/18,76,-1,-1,1,0,G3-Rep-Risk
+5,1,1,United States,230,49,3/7/18,195,-1,-1,1,0,G4-Unknown
+4,-1,-1,United States,231,50,4/19/18,111,Go Daddy,98,0,-1,G2-Known-Sender
+4,-1,-1,United States,232,0,1/30/18,9,-1,-1,1,0,G3-Rep-Risk
+4,-1,-1,Vietnam,233,100,1/16/18,149,-1,-1,0,-1,G4-Unknown
+5,1,1,United States,234,50,4/23/18,37,Go Daddy,98,0,1,G2-Known-Sender
+5,1,1,United Kingdom,235,-1,4/25/18,5,Microsoft,136,1,0,G2-Known-Sender
+3,0,1,United States,236,50,4/23/18,19,Google,100,0,1,G2-Known-Sender
+5,1,1,United States,237,50,4/25/18,538,Web.com,679,1,0,G2-Known-Sender
+4,1,-1,United States,238,50,4/18/18,79,-1,-1,1,0,G4-Unknown
+4,0,1,Kazakhstan,239,16,3/17/18,3,-1,-1,0,-1,G3-Rep-Risk
+3,0,1,United States,240,50,4/18/18,19,Google,100,0,1,G2-Known-Sender
+4,-1,-1,United States,241,49,1/25/18,60,-1,-1,1,0,G4-Unknown
+4,1,0,United States,242,50,4/25/18,466,-1,-1,0,1,G4-Unknown
+4,-1,-1,United States,243,50,4/25/18,108,Microsoft,136,0,1,G2-Known-Sender
+5,1,1,United States,244,50,4/25/18,64,Yahoo,647,1,0,G2-Known-Sender
+4,-1,-1,United States,245,50,4/24/18,121,Microsoft,136,0,1,G2-Known-Sender
+5,1,1,United States,246,50,4/24/18,139,Microsoft,136,0,1,G2-Known-Sender
+4,1,0,United States,247,16,4/25/18,406,-1,-1,0,1,G3-Rep-Risk
+5,1,1,United States,248,50,4/4/18,9,Microsoft,136,1,0,G2-Known-Sender
+4,-1,-1,Thailand,249,100,4/25/18,8,-1,-1,0,0,G4-Unknown
+5,1,1,United States,250,49,4/19/18,84,-1,-1,0,-1,G4-Unknown
+4,0,1,United States,251,50,4/23/18,31,Microsoft,136,0,1,G2-Known-Sender
+4,-1,-1,United States,252,50,4/19/18,92,Go Daddy,98,0,-1,G2-Known-Sender
+5,1,1,United States,253,50,4/25/18,7,Website Welcome,499,1,0,G2-Known-Sender
+5,1,1,United States,254,49,4/25/18,31,-1,-1,1,0,G4-Unknown
+5,1,1,United States,255,50,4/23/18,15,Website Welcome,499,1,0,G2-Known-Sender
+5,1,1,United States,256,-1,4/24/18,33,Google,100,0,1,G2-Known-Sender
+4,1,0,United States,257,49,4/25/18,151,-1,-1,0,-1,G4-Unknown
+5,1,1,United States,258,50,4/10/18,37,-1,-1,0,1,G4-Unknown
+5,1,1,United States,259,0,4/25/18,121,Endurance International Group,487,0,-1,G2-Known-Sender
+4,0,0,United States,260,16,4/20/18,27,Amazon,9,0,0,G2-Known-Sender
+4,0,1,United States,261,-1,12/26/17,3,-1,-1,0,0,G3-Rep-Risk
+4,-1,-1,United States,262,50,4/23/18,108,Microsoft,136,0,1,G2-Known-Sender
+5,1,1,United States,263,50,4/25/18,102,Go Daddy,98,0,1,G2-Known-Sender
+5,1,1,United States,264,50,4/12/18,27,Google,100,0,1,G2-Known-Sender
+5,1,1,United States,265,50,4/25/18,219,Web.com,679,1,0,G2-Known-Sender
+5,1,1,United States,266,0,4/25/18,88,-1,-1,1,0,G3-Rep-Risk
+5,1,1,United States,267,50,4/25/18,200,Charter Spectrum,665,1,0,G2-Known-Sender
+5,1,1,United States,268,-1,4/23/18,104,Comcast,469,1,0,G2-Known-Sender
+3,0,1,United States,269,50,4/25/18,503,Google,100,0,1,G2-Known-Sender
+5,1,1,United States,270,50,4/25/18,69,Go Daddy,98,0,1,G2-Known-Sender
+5,1,1,United States,271,0,4/3/18,1,-1,-1,1,0,G3-Rep-Risk
+4,1,0,United States,272,50,4/20/18,26,Microsoft,136,0,1,G2-Known-Sender
+5,1,1,United States,273,50,4/20/18,109,Go Daddy,98,0,1,G2-Known-Sender
+5,1,1,United States,274,0,4/17/18,4,Website Welcome,499,1,0,G2-Known-Sender
+5,1,1,United States,275,50,4/5/18,27,1&1 Internet,308,0,1,G2-Known-Sender
+5,1,1,United States,276,-1,4/23/18,35,Google,100,0,1,G2-Known-Sender
+5,1,1,United States,277,50,4/18/18,20,Microsoft,136,0,1,G2-Known-Sender
+4,-1,-1,United States,278,49,4/25/18,33,-1,-1,0,0,G4-Unknown
+4,-1,-1,United States,279,49,3/27/18,46,DreamHost,667,0,-1,G2-Known-Sender
+5,1,1,United States,280,50,4/25/18,1925,1&1 Internet,308,0,1,G2-Known-Sender
+4,1,0,United States,281,50,4/9/18,3,Microsoft,136,1,0,G2-Known-Sender
+4,-1,-1,United States,282,50,4/25/18,101,Microsoft,136,0,1,G2-Known-Sender
+5,1,1,United States,283,50,4/25/18,309,Go Daddy,98,0,1,G2-Known-Sender
+5,1,1,United States,284,50,4/25/18,484,Web.com,679,1,0,G2-Known-Sender
+5,1,1,United States,285,50,4/25/18,128,Yahoo,647,0,-1,G2-Known-Sender
+3,0,1,United States,286,50,4/25/18,112,Google,100,0,1,G2-Known-Sender
+5,1,1,United States,287,50,4/25/18,308,Go Daddy,98,0,1,G2-Known-Sender
+5,1,1,United States,288,49,4/2/18,72,-1,-1,0,-1,G4-Unknown
+4,1,0,United States,289,100,4/19/18,33,Microsoft,136,0,1,G2-Known-Sender
+5,1,1,United States,290,50,4/25/18,199,Go Daddy,98,0,1,G2-Known-Sender
+4,-1,-1,United States,291,0,4/25/18,157,-1,-1,0,1,G3-Rep-Risk
+5,1,1,United States,292,50,4/24/18,206,Amazon,9,0,1,G2-Known-Sender
+4,-1,-1,Japan,293,-1,4/25/18,175,-1,-1,0,1,G3-Rep-Risk
+5,1,1,Canada,294,49,3/30/18,8,Tucows,559,0,-1,G2-Known-Sender
+2,0,-1,United States,295,0,4/25/18,505,-1,-1,0,-1,G1-SPF-Record
+2,1,0,United States,296,49,4/25/18,66,-1,-1,1,1,G1-SPF-Record
+4,1,0,United States,297,16,4/25/18,576,-1,-1,0,1,G3-Rep-Risk
+5,1,1,United States,298,49,4/18/18,27,Microsoft,136,1,0,G2-Known-Sender
+4,1,-1,United States,299,16,4/23/18,203,-1,-1,1,0,G3-Rep-Risk
+3,0,1,United States,300,50,4/25/18,1047,Google,100,0,1,G2-Known-Sender
+4,1,0,United States,301,50,4/24/18,111,Microsoft,136,0,1,G2-Known-Sender
+5,1,1,United States,302,50,4/25/18,174,Google,100,0,0,G2-Known-Sender
+5,1,1,United States,303,16,4/25/18,142,-1,-1,1,0,G3-Rep-Risk
+4,0,1,Netherlands,304,16,1/29/18,1,-1,-1,0,1,G3-Rep-Risk
+3,0,1,United States,305,50,4/18/18,144,Google,100,0,0,G2-Known-Sender
+5,1,1,United States,306,50,4/23/18,81,Google,100,0,1,G2-Known-Sender
+4,-1,-1,United States,307,49,12/20/17,26,-1,-1,0,0,G4-Unknown
+2,1,-1,United States,308,50,4/14/18,1773,ServiceNow,187,1,1,G1-SPF-Record
+5,1,1,Canada,309,49,3/30/18,93,MailChannels,514,1,0,G2-Known-Sender
+4,-1,-1,United States,310,16,3/26/18,9,-1,-1,1,0,G3-Rep-Risk
+4,-1,-1,France,311,100,1/25/18,45,-1,-1,1,0,G4-Unknown
+5,1,1,United States,312,50,4/25/18,499,Web.com,679,1,0,G2-Known-Sender
+4,-1,-1,Vietnam,313,100,4/19/18,117,-1,-1,0,-1,G4-Unknown
+5,1,1,United States,314,0,4/7/18,4,-1,-1,1,0,G3-Rep-Risk
+4,-1,-1,United States,315,49,1/25/18,137,-1,-1,1,0,G4-Unknown
+5,1,1,United States,316,50,4/25/18,131,Go Daddy,98,0,1,G2-Known-Sender
+5,1,1,United States,317,50,4/18/18,17,Microsoft,136,0,1,G2-Known-Sender
+4,-1,-1,Netherlands,318,49,1/16/18,28,-1,-1,1,0,G4-Unknown
+5,1,1,United States,319,50,4/25/18,481,-1,-1,1,0,G4-Unknown
+5,1,1,United States,320,50,4/17/18,12,Microsoft,136,1,0,G2-Known-Sender
+4,1,0,United States,321,50,4/11/18,5,Microsoft,136,0,1,G2-Known-Sender
+5,1,1,United States,322,50,4/16/18,14,Microsoft,136,1,0,G2-Known-Sender
+5,1,1,United States,323,50,4/18/18,18,Microsoft,136,1,0,G2-Known-Sender
+5,1,1,United States,324,50,4/18/18,20,Microsoft,136,0,1,G2-Known-Sender
+5,1,1,United States,325,16,4/25/18,93,-1,-1,1,0,G3-Rep-Risk
+4,-1,-1,Italy,326,49,3/9/18,8,-1,-1,1,0,G4-Unknown
+4,1,0,United States,327,50,4/25/18,159,Cheetah Digital,82,0,1,G2-Known-Sender
+4,1,0,United States,328,49,3/16/18,3,US Internet Corp,371,0,1,G2-Known-Sender
+4,-1,-1,United States,329,100,1/24/18,78,-1,-1,1,0,G4-Unknown
+5,1,1,United States,330,16,4/25/18,452,-1,-1,1,0,G3-Rep-Risk
+4,-1,-1,Chile,331,49,3/20/18,4,-1,-1,0,-1,G4-Unknown
+5,1,1,United States,332,50,4/20/18,15,Google,100,0,1,G2-Known-Sender
+4,-1,-1,United States,333,100,1/25/18,206,-1,-1,1,0,G4-Unknown
+5,1,1,United States,334,50,4/25/18,110,Microsoft,136,0,1,G2-Known-Sender
+5,1,1,United States,335,50,4/20/18,10,Yahoo,647,1,0,G2-Known-Sender
+3,0,1,United States,336,50,4/18/18,180,Google,100,0,0,G2-Known-Sender
+5,1,1,United States,337,50,4/23/18,24,Microsoft,136,0,1,G2-Known-Sender
+4,1,-1,United States,338,49,1/25/18,98,-1,-1,1,0,G4-Unknown
+5,1,1,United States,339,0,4/23/18,10,Website Welcome,499,1,0,G2-Known-Sender
+5,1,1,United States,340,50,4/14/18,19,Microsoft,136,0,1,G2-Known-Sender
+4,-1,-1,United States,341,49,4/25/18,570,-1,-1,0,-1,G4-Unknown
+5,1,1,United States,342,50,4/19/18,15,Microsoft,136,0,1,G2-Known-Sender
+5,1,1,United States,343,50,4/18/18,23,Microsoft,136,1,0,G2-Known-Sender
+5,1,1,United States,344,50,4/19/18,10,Rackspace,538,1,0,G2-Known-Sender
+5,1,1,United States,345,50,4/25/18,200,Go Daddy,98,0,1,G2-Known-Sender
+4,1,0,United States,346,100,4/16/18,149,-1,-1,0,-1,G4-Unknown
+5,1,1,United States,347,50,4/25/18,567,Web.com,679,0,-1,G2-Known-Sender
+5,1,1,United States,348,50,4/15/18,27,-1,-1,0,1,G4-Unknown
+5,1,1,United States,349,-1,4/12/18,4,Google,100,0,1,G2-Known-Sender
+4,-1,-1,United States,350,-1,4/24/18,563,-1,-1,1,0,G3-Rep-Risk
+4,0,0,United States,351,49,3/25/18,4,Microsoft,136,1,0,G2-Known-Sender
+4,0,-1,United States,352,0,4/16/18,40,DreamHost,667,0,-1,G2-Known-Sender
+4,-1,-1,United States,353,50,1/18/18,118,-1,-1,0,-1,G4-Unknown
+4,1,0,United States,354,1,4/21/18,19,Time Warner,714,1,0,G2-Known-Sender
+5,1,1,United States,355,50,4/25/18,96,Microsoft,136,0,1,G2-Known-Sender
+4,1,0,United States,356,50,4/22/18,33,Microsoft,136,0,1,G2-Known-Sender
+4,-1,-1,United States,357,0,1/6/18,1,-1,-1,1,0,G3-Rep-Risk
+4,1,0,United States,358,16,4/25/18,130,Amazon,9,1,0,G2-Known-Sender
+5,1,1,United States,359,49,4/25/18,246,-1,-1,1,0,G4-Unknown
+5,1,1,United States,360,16,4/23/18,27,-1,-1,1,0,G3-Rep-Risk
+5,1,1,United States,361,16,4/24/18,15,-1,-1,1,0,G3-Rep-Risk
+4,1,0,United States,362,50,3/1/18,3,Microsoft,136,1,0,G2-Known-Sender
+5,1,1,United States,363,50,4/25/18,169,Go Daddy,98,0,1,G2-Known-Sender
+5,1,1,United States,364,49,4/9/18,16,Microsoft,136,1,0,G2-Known-Sender
+4,0,0,United States,365,0,4/19/18,13,Amazon,9,0,0,G2-Known-Sender
+4,-1,-1,United States,366,0,2/7/18,1158,-1,-1,0,1,G3-Rep-Risk
+5,1,1,United States,367,50,4/25/18,489,Web.com,679,1,0,G2-Known-Sender
+5,1,1,United States,368,50,4/25/18,111,Microsoft,136,0,1,G2-Known-Sender
+5,1,1,United States,369,49,4/25/18,3,-1,-1,1,0,G4-Unknown
+3,0,1,Belgium,370,-1,4/25/18,71,Google,100,0,1,G2-Known-Sender
+5,1,1,United States,371,50,4/20/18,174,Google,100,0,0,G2-Known-Sender
+5,1,1,United States,372,-1,4/4/18,5,-1,-1,1,0,G3-Rep-Risk
+5,1,1,Italy,373,16,3/19/18,3,-1,-1,1,0,G3-Rep-Risk
+5,1,1,United States,374,50,4/17/18,83,Google,100,0,1,G2-Known-Sender
+5,1,1,United States,375,16,4/25/18,136,-1,-1,1,0,G3-Rep-Risk
+5,1,1,United States,376,-1,4/23/18,89,Comcast,469,1,0,G2-Known-Sender
+5,1,1,United States,377,50,4/25/18,168,Cox Communications,664,1,0,G2-Known-Sender
+5,1,1,United States,378,0,4/25/18,73,-1,-1,1,0,G3-Rep-Risk
+5,1,1,United States,379,49,4/10/18,5,-1,-1,1,0,G4-Unknown
+4,0,1,United States,380,50,4/24/18,38,Microsoft,136,0,1,G2-Known-Sender
+4,1,0,United States,381,50,4/9/18,3,Microsoft,136,0,1,G2-Known-Sender
+5,1,1,United States,382,50,4/25/18,241,Web.com,679,1,0,G2-Known-Sender
+5,1,1,United States,383,50,4/23/18,24,Microsoft,136,0,1,G2-Known-Sender
+3,0,1,United States,384,50,4/23/18,20,Google,100,0,1,G2-Known-Sender
+4,-1,-1,United States,385,50,4/24/18,107,Microsoft,136,0,0,G2-Known-Sender
+3,1,0,United States,386,50,4/24/18,28,Rackspace,538,1,0,G2-Known-Sender
+5,1,1,United States,387,50,4/18/18,18,Yahoo,647,1,0,G2-Known-Sender
+4,-1,-1,Ukraine,388,49,2/8/18,70,-1,-1,0,-1,G4-Unknown
+5,1,1,United States,389,0,4/25/18,73,Massachusetts Institute of Technology,367,1,0,G2-Known-Sender
+5,1,1,United States,390,49,3/7/18,3,-1,-1,1,0,G4-Unknown
+4,0,1,United States,391,50,4/10/18,24,Microsoft,136,0,1,G2-Known-Sender
+4,1,0,United States,392,16,4/25/18,471,-1,-1,0,-1,G3-Rep-Risk
+5,1,1,United States,393,100,4/25/18,544,Web.com,679,1,0,G2-Known-Sender
+4,-1,-1,Latvia,394,100,1/23/18,78,-1,-1,1,0,G4-Unknown
+4,-1,-1,United States,395,50,4/24/18,108,Microsoft,136,0,1,G2-Known-Sender
+5,1,1,United States,396,16,4/25/18,506,-1,-1,1,0,G3-Rep-Risk
+4,0,1,United States,397,50,4/18/18,23,Microsoft,136,0,1,G2-Known-Sender
+5,1,1,United States,398,50,4/25/18,12,Yahoo,647,1,0,G2-Known-Sender
+4,-1,-1,United States,399,50,2/11/18,2,Microsoft,136,1,0,G2-Known-Sender
+3,1,0,United States,400,50,4/25/18,14,Google,100,0,1,G2-Known-Sender
+5,1,1,United States,401,16,4/23/18,6,-1,-1,1,0,G3-Rep-Risk
+4,-1,-1,United States,402,100,4/22/18,51,-1,-1,0,1,G4-Unknown
+5,1,1,United States,403,1,4/25/18,58,Time Warner,714,1,0,G2-Known-Sender
+5,1,1,United States,404,49,3/28/18,7,-1,-1,1,0,G4-Unknown
+5,1,1,United States,405,-1,4/20/18,2,-1,-1,1,0,G3-Rep-Risk
+4,-1,-1,Germany,406,50,2/4/18,2,1&1 Internet,308,0,1,G2-Known-Sender
+5,1,1,Austria,407,50,4/19/18,2,Microsoft,136,0,1,G2-Known-Sender
+5,1,1,United States,408,0,4/3/18,22,Website Welcome,499,1,0,G2-Known-Sender
+4,1,0,United States,409,50,3/27/18,2,Microsoft,136,1,0,G2-Known-Sender
+4,-1,-1,Germany,410,-1,1/31/18,331,-1,-1,0,-1,G3-Rep-Risk
+5,1,1,United States,411,50,4/25/18,65,Go Daddy,98,0,1,G2-Known-Sender
+5,1,1,United States,412,49,4/9/18,191,-1,-1,1,0,G4-Unknown
+5,1,1,United States,413,50,4/25/18,17,-1,-1,1,0,G4-Unknown
+5,1,1,United States,414,0,4/10/18,13,Website Welcome,499,1,0,G2-Known-Sender
+4,-1,-1,Germany,415,50,4/16/18,5,1&1 Internet,308,1,0,G2-Known-Sender
+3,0,1,United States,416,50,4/25/18,215,Go Daddy,98,0,1,G2-Known-Sender
+5,1,1,United States,417,50,4/25/18,105,Microsoft,136,0,-1,G2-Known-Sender
+5,1,1,United Kingdom,418,-1,4/18/18,1,Microsoft,136,1,0,G2-Known-Sender
+5,1,1,United States,419,0,4/20/18,13,DreamHost,667,0,0,G2-Known-Sender
+5,1,1,United States,420,50,4/23/18,19,Microsoft,136,0,1,G2-Known-Sender
+5,1,1,Germany,421,50,4/24/18,7,1&1 Internet,308,0,1,G2-Known-Sender
+4,-1,-1,United States,422,50,3/9/18,6,Yahoo,647,1,0,G2-Known-Sender
+5,1,1,United States,423,50,4/17/18,8,Microsoft,136,1,0,G2-Known-Sender
+5,1,1,United States,424,50,4/17/18,13,Microsoft,136,0,1,G2-Known-Sender
+5,1,1,United States,425,50,4/25/18,192,Go Daddy,98,0,1,G2-Known-Sender
+5,1,1,Netherlands,426,-1,3/27/18,2,-1,-1,0,0,G3-Rep-Risk
+5,1,1,United States,427,50,4/20/18,56,Windstream Communications,666,1,0,G2-Known-Sender
+5,1,1,United States,428,49,4/25/18,451,-1,-1,0,0,G4-Unknown
+5,1,1,United States,429,50,4/19/18,48,Windstream Communications,666,1,0,G2-Known-Sender
+4,-1,-1,Denmark,430,49,2/2/18,5,-1,-1,0,-1,G4-Unknown
+5,1,1,United States,431,50,3/28/18,155,Yahoo,647,1,0,G2-Known-Sender
+5,1,1,United States,432,49,4/4/18,153,Endurance International Group,487,0,1,G2-Known-Sender
+5,1,1,United States,433,50,4/24/18,75,Google,100,0,-1,G2-Known-Sender
+5,1,1,Panama,434,16,4/24/18,26,-1,-1,1,0,G3-Rep-Risk
+5,1,1,United States,435,100,4/2/18,16,-1,-1,1,0,G4-Unknown
+5,1,1,United States,436,50,4/2/18,105,Yahoo,647,1,0,G2-Known-Sender
+5,1,1,United States,437,49,4/16/18,1,-1,-1,1,0,G4-Unknown
+4,1,0,United States,438,49,4/16/18,2,Microsoft,136,1,0,G2-Known-Sender
+3,0,1,United States,439,50,4/16/18,16,Google,100,0,1,G2-Known-Sender
+5,1,1,United States,440,49,4/2/18,23,Endurance International Group,487,0,-1,G2-Known-Sender
+5,1,1,United States,441,50,4/24/18,28,Google,100,0,1,G2-Known-Sender
+4,-1,-1,United States,442,49,12/20/17,4,-1,-1,1,0,G4-Unknown
+5,1,1,United States,443,50,4/20/18,12,Microsoft,136,1,0,G2-Known-Sender
+5,1,1,United States,444,50,4/23/18,20,Microsoft,136,0,1,G2-Known-Sender
+4,0,1,United States,445,50,3/26/18,26,Yahoo,647,1,0,G2-Known-Sender
+4,-1,-1,Canada,446,16,4/7/18,1,MailChannels,514,0,-1,G2-Known-Sender
+3,1,0,United States,447,16,4/20/18,95,-1,-1,0,-1,G3-Rep-Risk
+5,1,1,United States,448,50,4/25/18,334,ZOHO,238,0,-1,G2-Known-Sender
+5,1,1,United States,449,50,4/25/18,312,Go Daddy,98,0,1,G2-Known-Sender
+5,1,1,United States,450,50,3/24/18,11,Website Welcome,499,1,0,G2-Known-Sender
+4,-1,-1,United States,451,50,4/25/18,117,Microsoft,136,0,1,G2-Known-Sender
+4,0,-1,United States,452,50,4/22/18,8,Go Daddy,98,0,1,G2-Known-Sender
+4,-1,-1,United States,453,50,4/23/18,103,Go Daddy,98,0,-1,G2-Known-Sender
+5,1,1,United States,454,-1,4/25/18,72,Comcast,469,0,0,G2-Known-Sender
+5,1,1,United States,455,50,4/24/18,12,Website Welcome,499,1,0,G2-Known-Sender
+5,1,1,United States,456,0,4/21/18,26,Amazon,9,1,0,G2-Known-Sender
+5,1,1,United States,457,16,3/8/18,66,-1,-1,1,0,G3-Rep-Risk
+4,-1,-1,United States,458,50,4/25/18,147,Microsoft,136,0,1,G2-Known-Sender
+5,1,1,United States,459,50,4/24/18,9,Website Welcome,499,1,0,G2-Known-Sender
+3,0,1,United States,460,50,4/18/18,29,Google,100,0,1,G2-Known-Sender
+4,1,0,United States,461,50,4/23/18,39,Microsoft,136,0,1,G2-Known-Sender
+5,1,1,United States,462,49,3/21/18,674,-1,-1,1,0,G4-Unknown
+5,1,1,United States,463,49,4/25/18,82,-1,-1,1,0,G4-Unknown
+4,-1,-1,United States,464,50,4/24/18,12,Google,100,0,1,G2-Known-Sender
+5,1,1,United States,465,-1,4/24/18,31,Google,100,0,1,G2-Known-Sender
+5,1,1,Argentina,466,16,4/25/18,20,-1,-1,1,0,G3-Rep-Risk
+4,1,0,United States,467,16,4/25/18,445,-1,-1,0,-1,G3-Rep-Risk
+3,0,1,Belgium,468,-1,4/25/18,30,Google,100,0,1,G2-Known-Sender
+4,-1,-1,United States,469,50,4/10/18,6,Verizon,219,0,-1,G2-Known-Sender
+5,1,1,United States,470,50,4/19/18,22,Microsoft,136,0,1,G2-Known-Sender
+4,-1,-1,United States,471,50,4/25/18,99,Cisco,304,1,0,G2-Known-Sender
+5,1,1,United States,472,50,4/6/18,4,-1,-1,1,0,G4-Unknown
+5,1,1,United States,473,-1,4/25/18,6,-1,-1,1,0,G3-Rep-Risk
+4,1,0,United States,474,16,4/24/18,213,-1,-1,0,-1,G3-Rep-Risk
+4,1,0,United States,475,50,4/25/18,120,Cisco,304,1,0,G2-Known-Sender
+5,1,1,United States,476,1,4/16/18,66,Time Warner,714,0,0,G2-Known-Sender
+5,1,1,United States,477,50,4/23/18,20,Microsoft,136,0,1,G2-Known-Sender
+5,1,1,United States,478,49,4/25/18,471,-1,-1,1,0,G4-Unknown
+5,1,1,United States,479,50,4/10/18,18,Cox Communications,664,1,0,G2-Known-Sender
+5,1,1,United States,480,50,4/18/18,27,-1,-1,1,0,G4-Unknown
+4,-1,-1,United States,481,50,2/8/18,3,Microsoft,136,1,0,G2-Known-Sender
+5,1,1,United States,482,50,4/5/18,8,Rackspace,538,1,0,G2-Known-Sender
+5,1,1,United States,483,50,4/24/18,112,Microsoft,136,0,1,G2-Known-Sender
+4,0,1,United States,484,50,4/23/18,26,Microsoft,136,0,1,G2-Known-Sender
+5,1,1,United States,485,50,4/25/18,485,Web.com,679,1,0,G2-Known-Sender
+5,1,1,United States,486,0,4/25/18,509,-1,-1,1,0,G3-Rep-Risk
+5,1,1,United States,487,0,4/20/18,26,-1,-1,1,0,G3-Rep-Risk
+5,1,1,United States,488,50,4/24/18,32,-1,-1,1,0,G4-Unknown
+5,1,1,United States,489,50,3/28/18,117,Yahoo,647,1,0,G2-Known-Sender
+4,-1,-1,United States,490,50,4/25/18,106,Microsoft,136,0,1,G2-Known-Sender
+5,1,1,United States,491,50,4/25/18,507,Web.com,679,1,0,G2-Known-Sender
+4,0,1,Japan,492,-1,1/25/18,23,-1,-1,0,0,G3-Rep-Risk
+4,1,0,United States,493,49,4/17/18,50,Verizon,219,1,0,G2-Known-Sender
+4,0,-1,United States,494,1,4/23/18,11,Time Warner,714,0,-1,G2-Known-Sender
+5,1,1,United States,495,50,4/25/18,106,Microsoft,136,0,1,G2-Known-Sender
+5,1,1,United States,496,50,4/18/18,14,Microsoft,136,1,0,G2-Known-Sender
+4,1,0,United States,497,50,4/3/18,5,-1,-1,1,0,G4-Unknown
+4,-1,-1,United States,498,49,1/26/18,2,-1,-1,0,-1,G4-Unknown
+4,0,1,United States,499,50,4/23/18,35,Microsoft,136,0,1,G2-Known-Sender
+5,1,1,United States,500,50,4/25/18,112,Microsoft,136,0,1,G2-Known-Sender

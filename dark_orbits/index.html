@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+      	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+      	<title>Dark Orbits</title>
+
+        <!-- Open Graph Data -->
+        <meta property="og:title" content="Dark Orbits" />
+        <meta property="og:url" content="http://viz.emaildefense.proofpoint.com/dark_orbits/" />
+        <meta property="og:image" content="img/share_image.png" />
+      	<meta name="description" content="Threat Visibility Explained">
+
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:description" content="Proofpoint: Threat visibility explained">
+        <meta name="twitter:image" content="http://viz.emaildefense.proofpoint.com/dark_orbits/img/share_image.png"/>
+
+        <!--favicon-->
+        <link rel="icon" href="img/favicon.ico?v=1.1" type="image/x-icon" />
+        <!--Pendo Tracking-->
+        <script>
+        (function(apiKey){
+          (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=[];
+            v=['initialize','identify','updateOptions','pageLoad'];for(w=0,x=v.length;w<x;++w)(function(m){
+            o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);
+            y=e.createElement(n);y.async=!0;y.src='https://cdn.pendo.io/agent/static/'+apiKey+'/pendo.js';
+            z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);})(window,document,'script','pendo');
+         pendo.initialize({
+              apiKey: '10960b08-0751-4adb-5acd-f7933aac8b1e',
+              visitor: {
+                id:           null,
+                role:         'public',
+                visitor_product: 'EFD'
+              },
+              account: {
+                id: '1', // realm id Highly recommended,
+                account_name: 'Proofpoint',
+                product: 'EFD'
+              }
+          });
+        })('10960b08-0751-4adb-5acd-f7933aac8b1e');
+      </script>
+        <!-- D3 -->
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <!--<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>-->
+        <!-- Scrollama -->
+        <!--<script src='https://unpkg.com/intersection-observer'></script>-->
+        <script src='https://unpkg.com/scrollama'></script>
+        <script src = "js/intersection-observer.js" type="text/javascript"></script>
+        <!-- Annotation -->
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/d3-annotation/2.2.5/d3-annotation.js'></script>
+        <!-- Font -->
+        <link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Gugi" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Cousine|Fredericka+the+Great|Neucha|Press+Start+2P|Space+Mono" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Bungee+Hairline|Raleway+Dots|Share+Tech+Mono" rel="stylesheet">
+        <!-- ChartType -->
+        <!--<script src="js/state.js" type="text/javascript"></script>-->
+        <script src="js/scroller.js" type="text/javascript"></script>
+        <script src="js/utils.js" type="text/javascript"></script>
+        <script src="js/orbit.js" type="text/javascript"></script>
+        <script src="js/interaction.js" type="text/javascript"></script>
+        <!--<script src="js/counter.js" type="text/javascript"></script>-->
+        <!--<script src="js/legend.js" type="text/javascript"></script>-->
+        <script src="js/gradient_legend.js" type="text/javascript"></script>
+        <!-- CSS -->
+
+        <link href="css/annotation.css" type="text/css" rel="stylesheet">
+        <link href="css/down-arrows.css" type="text/css" rel="stylesheet">
+        <link href="css/scrolling.css" type="text/css" rel="stylesheet">
+        <link href="css/hover.css" type="text/css" rel="stylesheet">
+        <link href="css/counter.css" type="text/css" rel="stylesheet">
+        <link href="css/legend.css" type="text/css" rel="stylesheet">
+        <link href="css/stylesheet.css" type="text/css" rel="stylesheet">
+        <style>
+        /* CSS */
+        </style>
+        <script type="text/javascript">
+        (function () {
+            // from https://kb.blackbaud.com/articles/Article/115882
+            var userAgent = window.navigator.userAgent.toLowerCase();
+            console.log(userAgent)
+            var warningMessage = 'Please use the desktop version of Chrome, Firefox, or Safari for the best viewing options.';
+            var support = false;
+            // Internet Explorer 11 and lower (MSIE test)
+
+            var isChromium = window.chrome;
+            var winNav = window.navigator;
+            var vendorName = winNav.vendor;
+            var isOpera = typeof window.opr !== "undefined";
+            var isIEedge = winNav.userAgent.indexOf("Edge") > -1;
+            var isIOSChrome = winNav.userAgent.match("CriOS");
+
+            if (isIOSChrome) {
+               // is Google Chrome on IOS
+               support = false;
+            } else if(
+              isChromium !== null &&
+              typeof isChromium !== "undefined" &&
+              vendorName === "Google Inc." &&
+              isOpera === false &&
+              isIEedge === false
+            ) {
+               // is Google Chrome
+               support = true;
+            } else if (userAgent.toLowerCase().indexOf('firefox') > -1) {
+               // is FireFox
+               support = true;
+            } else if (userAgent.toLowerCase().indexOf('safari') > -1) {
+               // is Safari
+               support = true;
+            }
+            if (!support) {
+                window.alert(warningMessage)
+            }
+        } ());
+        </script>
+    </head>
+
+<!--
+        "step0":blackhole
+        , "step1":blackholeLabel
+        , "step2":center
+        , "step3":coronaLinear
+        , "step4":coronaLog
+        , "step5":coronaSPF
+        , "step6":coronaSender
+        , "step7":coronaIP
+        , "step8":coronaUnknown
+-->
+    <body class="mainBody-background">
+        <section id='intro'>
+      		<p class='intro__overline'>
+      			<!--<a href='https://github.com/russellgoldenberg/scrollama'>scrollama.js</a>-->
+      		</p>
+      		<h1 class='intro__hed title-size-font title-font-family title-img-background title-border-radius'>Dark Orbits:<br>Threat Visibility Explained</h1>
+      		<p class='intro__dek'>
+      		</p>
+          <div class="container1">
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+          </div>
+      	</section>
+      	<section id='scroll'>
+      		<div class='scroll__graphic mainBody-background'>
+            <div id = 'orbit'>
+              <!--<canvas id = "viz-canvas"></canvas>-->
+            </div>
+      		</div>
+      		<div class='scroll__text'>
+            <div class='step general-font-family general-size-font' data-step='0'>
+              <p>The true mystery of the world is the visible, not the invisible.<br>-- Oscar Wilde</p>
+              <br></br>
+            </div>
+            <div class='step general-font-family general-size-font' data-step='1'>
+              <p class='title-size-font title-font-family'>Introduction</p>
+              <p class='general-font-family general-size-font'>Who should be authorized to send email on your behalf? Proofpoint's products provide email intelligence.</p>
+            </div>
+      			<div class='step general-font-family general-size-font' data-step='2'>
+              <p class='title-size-font title-font-family'>Terminology</p>
+              <p>Each email comes from a unique device identity called an <font color="#E8336D">IP address</font>.</p>
+      			</div>
+            <div class='step general-font-family general-size-font' data-step='3'>
+              <p class='title-size-font title-font-family'>Quantity</p>
+              <p>How many IP addresses send email on behalf of your business? Possibly thousands.</p>
+            </div>
+            <div class='step general-font-family general-size-font' data-step='4'>
+              <p class='title-size-font title-font-family'>Volume</p>
+              <p>How many emails are sent from each IP address? Possibly one million (center), but more often much less (outer orbit). <font color="#E8336D">Hover on the IP addresses for orbital details</font>.</p>
+            </div>
+            <div class='step general-font-family general-size-font' data-step='5'>
+              <p class='title-size-font title-font-family'>Spread</p>
+              <p>To highlight the email volume variation, a new scaling technique is applied. <font color="#E8336D">Hover on the IP addresses for orbital details</font>.</p>
+            </div>
+            <div class='step general-font-family general-size-font' data-step='6'>
+              <p class='title-size-font title-font-family'>Intel: Introduction</p>
+              <p>Which IP addresses are <font color="#edf8fb">friend</font> or <font color="#edf8fb">foe</font>? Intelligence provides color. <font color="#E8336D">Click on the IP addresses for intel</font>.
+            </div>
+            <div class='step general-font-family general-size-font' data-step='7'>
+              <p class='title-size-font title-font-family'>Intel: Location</p>
+              <p>Knowing the location of business operations may be enough to flag specific locations as fraudulent.</p>
+            </div>
+            <div class='step general-font-family general-size-font' data-step='8'>
+              <p class='title-size-font title-font-family'>Intel: Reputation</p>
+              <p>A model-based IP reputation score provides evidence about who should be trusted and who should not.</p>
+            </div>
+            <div class='step general-font-family general-size-font' data-step='9'>
+              <p class='title-size-font title-font-family'>Intel: Sender</p>
+              <p>Proofpoint's industry experts curate clusters of IP addresses owned by hundreds of companies like Google, MailChimp, and Wells Fargo.</p>
+            </div>
+            <div class='step general-font-family general-size-font' data-step='10'>
+              <p class='title-size-font title-font-family'>Intel: Identity</p>
+              <p>Metadata contained within the IP addresses' emails can reveal the identity of the true sender.</p>
+            </div>
+            <div class='step general-font-family general-size-font' data-step='11'>
+              <p class='title-size-font title-font-family'>Classification</p>
+              <p>Aggregated intelligence sorts the IP addresses into <font color="#edf8fb">friends</font> or <font color="#edf8fb">foes</font> for sending emails on behalf of your business.</p>
+            </div>
+            <div class='step general-font-family general-size-font' data-step='12'>
+              <p class='title-size-font title-font-family'>Professional Services</p>
+              <p>Proofpoint’s professional services consultants bring additional forensic intelligence to ensure that all legitimate senders have been identified.</p>
+            </div>
+            <div class='step general-font-family general-size-font' data-step='13'>
+              <p class='title-size-font title-font-family'>Authorize</p>
+              <p>With Proofpoint, your business is now equipped to authorize these <font color="#edf8fb">friends</font> to send email on your behalf.</p>
+            </div>
+      		</div>
+      	</section>
+        <section id='outro'>
+          <div class="container2">
+            <div class="chevron2"></div>
+            <div class="chevron2"></div>
+            <div class="chevron2"></div>
+          </div>
+        </section>
+        <section id='outro'>
+          <div class='general-font-family general-color-font' >
+            <p class='title-size-font title-font-family'>Are you equipped to fight email fraud?</p>
+            <a href="https://www.proofpoint.com/us/learn-more/dmarc-assessment" target="_blank" >
+              <div id="call-to-action" class="title-border-radius">
+              Get an assessment
+              </div>
+            </a>
+          </div>
+        </section>
+        <section id="outro">
+          <!--blank-->
+        </section>
+        <section id='outro'>
+          <div class='general-font-family general-color-font'>
+            <a href="http://bit.ly/dark_orbits" target="_blank">
+              <div id="call-to-action"class='title-border-radius'>
+                bit.ly/dark_orbits
+              </div>
+            </a>
+          </div>
+        </section>
+      	<div class='debug'></div>
+        <div id="run-script">
+          <script src="js/app.js" type="text/javascript"></script>
+        </div>
+    </body>
+</html>
