@@ -1,5 +1,3 @@
-# Collaboration
-This repo is made in collaboration with Dfuzr and Proofpoint.
+# Dark Oribits
+The goal of this project: showcase how Proofpoints Email Defense products identify ip-addresses as friend or foe.
 
-## Projects
-- [Initial Dark Oribits](dark_orbits)
