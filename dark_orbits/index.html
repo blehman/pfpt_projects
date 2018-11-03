@@ -19,36 +19,13 @@
 
         <!--favicon-->
         <link rel="icon" href="img/favicon.ico?v=1.1" type="image/x-icon" />
-        <!--Pendo Tracking-->
-        <script>
-        (function(apiKey){
-          (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=[];
-            v=['initialize','identify','updateOptions','pageLoad'];for(w=0,x=v.length;w<x;++w)(function(m){
-            o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);
-            y=e.createElement(n);y.async=!0;y.src='https://cdn.pendo.io/agent/static/'+apiKey+'/pendo.js';
-            z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);})(window,document,'script','pendo');
-         pendo.initialize({
-              apiKey: '10960b08-0751-4adb-5acd-f7933aac8b1e',
-              visitor: {
-                id:           null,
-                role:         'public',
-                visitor_product: 'EFD'
-              },
-              account: {
-                id: '1', // realm id Highly recommended,
-                account_name: 'Proofpoint',
-                product: 'EFD'
-              }
-          });
-        })('10960b08-0751-4adb-5acd-f7933aac8b1e');
-      </script>
         <!-- D3 -->
         <script src="https://d3js.org/d3.v5.min.js"></script>
         <!--<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>-->
         <!-- Scrollama -->
         <!--<script src='https://unpkg.com/intersection-observer'></script>-->
         <script src='https://unpkg.com/scrollama'></script>
-        <script type="text/javascript" src="{{ url_for('static', filename='js/intersection-observer.js') }}"></script>-->
+        <script type="text/javascript" src='js/intersection-observer.js'></script>-->
         <!--<script src = "js/intersection-observer.js" type="text/javascript"></script>-->
 
         <!-- Annotation -->
@@ -205,7 +182,7 @@
             var graphData = '{{ data | tojson | safe }}';
             console.log(graphData)
           </script>
-          <script type="text/javascript" src="{{ url_for('static', filename='js/app.js') }}"></script>
+          <script type="text/javascript" src='js/app.js'></script>
           <!--<script src="js/app.js" type="text/javascript"></script>-->
         </div>
     </body>
