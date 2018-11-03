@@ -28,7 +28,7 @@ function Acts(stateFunc){
 
       svg.on("click", function(){
 
-        if ((stateFunc.data.step<6)||(stateFunc.data.step>13)) return;
+        if ((stateFunc.data.step<2)||(stateFunc.data.step>5)) return;
         /*
         var mouseCoords = d3.mouse(this)
         , node = canvas2svgNode(mouseCoords)
@@ -82,7 +82,7 @@ function Acts(stateFunc){
       }
 
       function handleMouseMove(){
-        if ( ((stateFunc.data.step<4)||(stateFunc.data.step>10)) ) return;
+        if ( ((stateFunc.data.step<1)||(stateFunc.data.step>5)) ) return;
         // d3.mouse(this) is not working in FireFox so using another method to get the screen coords.
         var ff_element = document.getElementById("viz-svg") //d3.select("#viz-svg").node()
 

@@ -48,7 +48,9 @@
         <!-- Scrollama -->
         <!--<script src='https://unpkg.com/intersection-observer'></script>-->
         <script src='https://unpkg.com/scrollama'></script>
-        <script src = "js/intersection-observer.js" type="text/javascript"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/intersection-observer.js') }}"></script>-->
+        <!--<script src = "js/intersection-observer.js" type="text/javascript"></script>-->
+
         <!-- Annotation -->
         <script src='https://cdnjs.cloudflare.com/ajax/libs/d3-annotation/2.2.5/d3-annotation.js'></script>
         <!-- Font -->
@@ -58,7 +60,6 @@
         <link href="https://fonts.googleapis.com/css?family=Cousine|Fredericka+the+Great|Neucha|Press+Start+2P|Space+Mono" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Bungee+Hairline|Raleway+Dots|Share+Tech+Mono" rel="stylesheet">
         <!-- ChartType -->
-        <!--<script src="js/state.js" type="text/javascript"></script>-->
         <script src="js/scroller.js" type="text/javascript"></script>
         <script src="js/utils.js" type="text/javascript"></script>
         <script src="js/orbit.js" type="text/javascript"></script>
@@ -75,6 +76,8 @@
         <link href="css/counter.css" type="text/css" rel="stylesheet">
         <link href="css/legend.css" type="text/css" rel="stylesheet">
         <link href="css/stylesheet.css" type="text/css" rel="stylesheet">
+
+        <!-- CSS -->
         <style>
         /* CSS */
         </style>
@@ -83,7 +86,7 @@
             // from https://kb.blackbaud.com/articles/Article/115882
             var userAgent = window.navigator.userAgent.toLowerCase();
             console.log(userAgent)
-            var warningMessage = 'Please use the desktop version of Chrome, Firefox, or Safari for the best viewing options.';
+            var warningMessage = 'Please use the desktop version of Chrome or Firefox for the best viewing options.';
             var support = false;
             // Internet Explorer 11 and lower (MSIE test)
 
@@ -108,9 +111,6 @@
                support = true;
             } else if (userAgent.toLowerCase().indexOf('firefox') > -1) {
                // is FireFox
-               support = true;
-            } else if (userAgent.toLowerCase().indexOf('safari') > -1) {
-               // is Safari
                support = true;
             }
             if (!support) {
@@ -152,59 +152,31 @@
             </div>
       		</div>
       		<div class='scroll__text'>
-            <div class='step general-font-family general-size-font' data-step='0'>
-              <p>The true mystery of the world is the visible, not the invisible.<br>-- Oscar Wilde</p>
-              <br></br>
-            </div>
-            <div class='step general-font-family general-size-font' data-step='1'>
+      			<div class='step general-font-family general-size-font' data-step='0'>
               <p class='title-size-font title-font-family'>Introduction</p>
-              <p class='general-font-family general-size-font'>Who should be authorized to send email on your behalf? Proofpoint's products provide email intelligence.</p>
-            </div>
-      			<div class='step general-font-family general-size-font' data-step='2'>
-              <p class='title-size-font title-font-family'>Terminology</p>
-              <p>Each email comes from a unique device identity called an <font color="#E8336D">IP address</font>.</p>
+              <p>The origin of email is an insecure unique device identity called an <font color="#E8336D">IP address</font> that imposters use to send fraudulent email.</p>
       			</div>
+            <div class='step general-font-family general-size-font' data-step='1'>
+              <p class='title-size-font title-font-family'>Scale</p>
+              <p>Each IP address can send many emails on behalf of your business. <font color="#E8336D">Hover on the IP addresses for the number of messages sent</font>.</p>
+            </div>
+            <div class='step general-font-family general-size-font' data-step='2'>
+              <p class='title-size-font title-font-family'>Problem</p>
+              <p>Without verifying the identity of each IP address, your employees are in the dark for knowing the identity of imposters. Who are the imposters here? <font color="#E8336D">Click on the IP addresses for intel.</font></p>
+            </div>
             <div class='step general-font-family general-size-font' data-step='3'>
-              <p class='title-size-font title-font-family'>Quantity</p>
-              <p>How many IP addresses send email on behalf of your business? Possibly thousands.</p>
+              <p class='title-size-font title-font-family'>Solution</p>
+              <p>With industry leading intelligence, Proofpoint brings your buisiness out of the dark to verify friends from foes.</p>
             </div>
             <div class='step general-font-family general-size-font' data-step='4'>
-              <p class='title-size-font title-font-family'>Volume</p>
-              <p>How many emails are sent from each IP address? Possibly one million (center), but more often much less (outer orbit). <font color="#E8336D">Hover on the IP addresses for orbital details</font>.</p>
-            </div>
-            <div class='step general-font-family general-size-font' data-step='5'>
-              <p class='title-size-font title-font-family'>Spread</p>
-              <p>To highlight the email volume variation, a new scaling technique is applied. <font color="#E8336D">Hover on the IP addresses for orbital details</font>.</p>
-            </div>
-            <div class='step general-font-family general-size-font' data-step='6'>
-              <p class='title-size-font title-font-family'>Intel: Introduction</p>
-              <p>Which IP addresses are <font color="#edf8fb">friend</font> or <font color="#edf8fb">foe</font>? Intelligence provides color. <font color="#E8336D">Click on the IP addresses for intel</font>.
-            </div>
-            <div class='step general-font-family general-size-font' data-step='7'>
-              <p class='title-size-font title-font-family'>Intel: Location</p>
-              <p>Knowing the location of business operations may be enough to flag specific locations as fraudulent.</p>
-            </div>
-            <div class='step general-font-family general-size-font' data-step='8'>
-              <p class='title-size-font title-font-family'>Intel: Reputation</p>
-              <p>A model-based IP reputation score provides evidence about who should be trusted and who should not.</p>
-            </div>
-            <div class='step general-font-family general-size-font' data-step='9'>
-              <p class='title-size-font title-font-family'>Intel: Sender</p>
-              <p>Proofpoint's industry experts curate clusters of IP addresses owned by hundreds of companies like Google, MailChimp, and Wells Fargo.</p>
-            </div>
-            <div class='step general-font-family general-size-font' data-step='10'>
-              <p class='title-size-font title-font-family'>Intel: Identity</p>
-              <p>Metadata contained within the IP addresses' emails can reveal the identity of the true sender.</p>
-            </div>
-            <div class='step general-font-family general-size-font' data-step='11'>
               <p class='title-size-font title-font-family'>Classification</p>
               <p>Aggregated intelligence sorts the IP addresses into <font color="#edf8fb">friends</font> or <font color="#edf8fb">foes</font> for sending emails on behalf of your business.</p>
             </div>
-            <div class='step general-font-family general-size-font' data-step='12'>
+            <div class='step general-font-family general-size-font' data-step='5'>
               <p class='title-size-font title-font-family'>Professional Services</p>
               <p>Proofpoint’s professional services consultants bring additional forensic intelligence to ensure that all legitimate senders have been identified.</p>
             </div>
-            <div class='step general-font-family general-size-font' data-step='13'>
+            <div class='step general-font-family general-size-font' data-step='6'>
               <p class='title-size-font title-font-family'>Authorize</p>
               <p>With Proofpoint, your business is now equipped to authorize these <font color="#edf8fb">friends</font> to send email on your behalf.</p>
             </div>
@@ -217,31 +189,24 @@
             <div class="chevron2"></div>
           </div>
         </section>
-        <section id='outro'>
-          <div class='general-font-family general-color-font' >
-            <p class='title-size-font title-font-family'>Are you equipped to fight email fraud?</p>
-            <a href="https://www.proofpoint.com/us/learn-more/dmarc-assessment" target="_blank" >
-              <div id="call-to-action" class="title-border-radius">
-              Get an assessment
-              </div>
-            </a>
-          </div>
-        </section>
-        <section id="outro">
-          <!--blank-->
-        </section>
-        <section id='outro'>
-          <div class='general-font-family general-color-font'>
-            <a href="http://bit.ly/dark_orbits" target="_blank">
-              <div id="call-to-action"class='title-border-radius'>
-                bit.ly/dark_orbits
-              </div>
-            </a>
-          </div>
-        </section>
+         <section id='outro'>
+            <div class='general-font-family general-color-font' >
+              <p class='title-size-font title-font-family'>Are you equipped to fight email fraud?</p>
+              <a href="https://www.proofpoint.com/us/learn-more/dmarc-assessment" target="_blank" >
+                <div id="call-to-action" class="title-border-radius">
+                Get an assessment
+                </div>
+              </a>
+            </div>
+          </section>
       	<div class='debug'></div>
         <div id="run-script">
-          <script src="js/app.js" type="text/javascript"></script>
+          <script>
+            var graphData = '{{ data | tojson | safe }}';
+            console.log(graphData)
+          </script>
+          <script type="text/javascript" src="{{ url_for('static', filename='js/app.js') }}"></script>
+          <!--<script src="js/app.js" type="text/javascript"></script>-->
         </div>
     </body>
 </html>

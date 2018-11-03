@@ -30,10 +30,11 @@ function Orbit(stateFunc){
     , nodeRadius = d3.scaleOrdinal().domain([1,2,3,4,5]).range([1,1,5,5,5])
     , scroller
     , progress = 0.0
-    , progressScale = d3.scaleLinear().domain([0.0,0.6]).range([0,1]).clamp(true)
+    , progressScale = d3.scaleLinear().domain([0.0,0.8]).range([0,1]).clamp(true)
     , drawLogic
     , legendMargins
     , step = 0;
+    ;
 
   function chart(selection){
     // note: selection is passed in from the .call(iChartType), which is the same as myHeatmap(d3.select('.stuff')) -- ??
@@ -77,26 +78,20 @@ function Orbit(stateFunc){
       };
 
       stepHandler = {
-        "step0":blackhole
-        , "step1":blackhole
-        , "step2":blackholeLabel  //blackholeSpectrum
-        , "step3":center
-        , "step4":coronaLinear      //blackholeRing
-        , "step5":coronaLog
-        , "step6":coronaLog
-        , "step7":coronaGeo
-        , "step8":coronaIP
-        , "step9":coronaSender
-        , "step10":coronaDMARC
-        , "step11":bucketSim2_
-        , "step12":tbd__
-        , "step13":authorize_
+        "step0":blackholeLabel
+        , "step1":coronaLog //blackholeSpectrum
+        , "step2":coronaLog
+        , "step3":coronaGeo //coronaLog     //blackholeRing
+        , "step4":bucketSim2_
+        , "step5":tbd__
+        , "step6":authorize_
       }
 
       iDispatch.on("step-change", function(i){
         step = i;
         stateFunc.data.step = step;
         var stepName = stepHandler["step"+ step].name ;
+        console.log(stepName)
         //console.log(stepName)
         stepHandler["step"+ step]()
         stateFunc.data.dispatch.call("update-legend",this,step)
@@ -463,6 +458,109 @@ function Orbit(stateFunc){
           return xVal[d.intel.tbdAuth](d)
         }
       }//authorize_()
+      function customize_(){
+        console.log("GOT TO CUSTOMIZE")
+        ctx.globalAlpha = 1;
+        var len = dataObject.client.length
+          , progressIndex = Math.ceil(progressScale(stateFunc.data.progress)*len)
+          , adj = (stateFunc.data.adjY - stateFunc.data.outerRingRadius)/4
+          , yAuthCounter = {
+            "authorized": -1
+            , "unauthorized":-1
+          }
+          , xAuthCounter = {
+            "authorized": -1
+            , "unauthorized":-1
+          }
+          , squareWidth = 2*stateFunc.data.simSetup.nodeRadius
+          , outerMargin = 20
+          , leftStartPoint = (-1*(stateFunc.data.adjX-outerMargin))
+          , rightStartPoint = (stateFunc.data.adjX-outerMargin)
+          , innerMargin = 20
+          , baseWidth = stateFunc.data.adjX-outerMargin-innerMargin
+          , baseCount = Math.floor(baseWidth/(squareWidth))
+          , yRow = {
+              "authorized":0
+              , "unauthorized":0
+          }
+          , xCol = {
+              "authorized":0
+              , "unauthorized":0
+          }
+          , tbd_authorized_xCol_leftStartPoint = leftStartPoint + ((stateFunc.data.authCount.authorized%baseCount)*squareWidth)
+          , tbd_authorized_xCol_rightStartPoint = rightStartPoint - ( ((stateFunc.data.authCount.unauthorized%baseCount)-1)*squareWidth)
+          , tbd_authorized_yRow_start = -1*Math.ceil(stateFunc.data.authCount.authorized/baseCount)*squareWidth
+          , tbd_unathorized_yRow_start = -1*Math.ceil(stateFunc.data.authCount.unauthorized/baseCount)*squareWidth
+          , tbdxCol = {
+              "authorized":tbd_authorized_xCol_leftStartPoint-(1*squareWidth)
+              , "unauthorized":tbd_authorized_xCol_rightStartPoint
+          }
+          , tbdyRow = {
+              "authorized":tbd_authorized_yRow_start
+              , "unauthorized":tbd_unathorized_yRow_start
+          }
+          , tbdyAuthCounter = {
+            "authorized": stateFunc.data.authCount.authorized-1
+            , "unauthorized":stateFunc.data.authCount.unauthorized-1
+          }
+          , tbdxAuthCounter = {
+            "authorized": stateFunc.data.authCount.authorized-1
+            , "unauthorized": stateFunc.data.authCount.unauthorized-1
+          }
+          , simDelta = {
+              "x": isolate( d3.forceX(function(d,i){
+                if (d.intel.auth!="tbd"){
+                  xAuthCounter[d.intel.auth]++
+                  //console.log(i,xAuthCounter[d.intel.auth],baseCount, (xAuthCounter[d.intel.auth]%baseCount==0))
+                  xCol[d.intel.auth] = incrementCol(d)
+                  return xCol[d.intel.auth]
+                }else {
+                  tbdxAuthCounter[d.intel.tbdAuth]++
+                  //console.log(i,xAuthCounter[d.intel.auth],baseCount, (xAuthCounter[d.intel.auth]%baseCount==0))
+                  tbdxCol[d.intel.tbdAuth] = tbdincrementCol(d)
+                  return tbdxCol[d.intel.tbdAuth]
+                }
+              }).strength(0.15), (d,i) => ( (d.intel.auth!="tbd")||((d.intel.auth=="tbd")) ) )
+            , "y": isolate( d3.forceY().y(
+                function(d,i){
+                  if (d.intel.auth!="tbd"){
+                    yAuthCounter[d.intel.auth]++
+                    yRow[d.intel.auth] = (yAuthCounter[d.intel.auth]%baseCount==0)?(yRow[d.intel.auth]-squareWidth):yRow[d.intel.auth]
+                    return yRow[d.intel.auth]+(stateFunc.data.outerRingRadius + adj*2)
+                  }else {
+                    tbdyAuthCounter[d.intel.tbdAuth]++
+                    tbdyRow[d.intel.tbdAuth] = (tbdyAuthCounter[d.intel.tbdAuth]%baseCount==0)?(tbdyRow[d.intel.tbdAuth]-squareWidth):tbdyRow[d.intel.tbdAuth]
+                    return tbdyRow[d.intel.tbdAuth]+(stateFunc.data.outerRingRadius + adj*2)
+                  }
+                })
+                .strength(0.15), (d,i) => ( (d.intel.auth!="tbd")||((d.intel.auth=="tbd")) ))
+            , "tick": colorFullInel__progress
+            , "center": null
+            //, "center": isolate(d3.forceCenter(0,0), (d,i) => ((i<=progressIndex)||d.intel.auth=="tbd"))
+            , "r": null
+            , "charge": null
+            , "alphaDecay": simSetup.alphaDecay
+            , "alphaMin": simSetup.alphaMin
+            , "alphaTarget": simSetup.alphaTarget
+          }
+        changeSim(simDelta)
+        function incrementCol(d){
+          var  xVal = {
+            "authorized":d => (xAuthCounter[d.intel.auth]%baseCount==0)?leftStartPoint:(xCol[d.intel.auth]+squareWidth)
+            , "unauthorized":d => (xAuthCounter[d.intel.auth]%baseCount==0)?rightStartPoint:(xCol[d.intel.auth]-squareWidth)
+            }
+          //console.log("{start} | {auth}: {value}".replace("{start}",xAuthCounter[d.intel.auth]%baseCount==0).replace("{auth}",d.intel.auth).replace("{value}",xVal[d.intel.auth](d)))
+          return xVal[d.intel.auth](d)
+        }
+        function tbdincrementCol(d){
+          var  xVal = {
+            "authorized":d => (tbdxAuthCounter[d.intel.tbdAuth]%baseCount==0)?leftStartPoint:(tbdxCol[d.intel.tbdAuth]+squareWidth)
+            , "unauthorized":d => (tbdxAuthCounter[d.intel.tbdAuth]%baseCount==0)?rightStartPoint:(tbdxCol[d.intel.tbdAuth]-squareWidth)
+            }
+          //console.log("{start} | {auth}: {value}".replace("{start}",xAuthCounter[d.intel.auth]%baseCount==0).replace("{auth}",d.intel.auth).replace("{value}",xVal[d.intel.auth](d)))
+          return xVal[d.intel.tbdAuth](d)
+        }
+      }//customize_()
       function center(){
         simDelta = {
             "x": d3.forceX(-500).strength(0)
@@ -512,7 +610,7 @@ function Orbit(stateFunc){
         simDelta = {
             "x": d3.forceX(-500).strength(0)
           , "y": d3.forceY(-500).strength(0)
-          , "tick": colorGeoIntel_//colorSPF_
+          , "tick": colorFullInel__progress//colorGeoIntel_//colorSPF_
           , "center": d3.forceCenter(0,0)
           , "r": d3.forceRadial(function(d) { return stateFunc.data.rScale(d.message_count) })
           , "charge": d3.forceCollide().radius(simSetup.forceCollideRadius).strength(0.90)
@@ -1382,6 +1480,147 @@ COLORING FUNCTIONS
 
         ctx.restore();
       }//colorFullInel__
+      function colorFullInel__progress(){
+        clearSaveTranslateContext();
+        addRings();
+        if (stateFunc.data.step>7){
+          addFriendFoeTxt()
+        }
+        for (var i = 0; i < 25; i++) {
+          simulation.tick();
+        }
+        var geoFAIL = stateFunc.data.geoIntelPercent.fail
+          , geoPASS = stateFunc.data.geoIntelPercent.pass
+          , ipFAIL = stateFunc.data.ipRepIntelPercent.fail
+          , ipPASS = stateFunc.data.ipRepIntelPercent.pass
+          , senderFAIL = stateFunc.data.senderIntelPercent.fail
+          , senderPASS = stateFunc.data.senderIntelPercent.pass
+          , dmarcFAIL = stateFunc.data.dmarcIntelPercent.fail
+          , dmarcPASS = stateFunc.data.dmarcIntelPercent.pass;
+
+        // color nodes w/ geo
+        var logicType = "none"
+          , filter = d => ((d.intel.geo==geoPASS)&(d.intel.ipRep==ipFAIL)&(d.intel.sender==senderFAIL)&(d.intel.dmarc==dmarcFAIL))
+          , fillColor = progress => stateFunc.data.intelColorScale((geoPASS+ipFAIL+senderFAIL+dmarcFAIL)*progressScale(progress))
+          , strokeColor = progress => stateFunc.data.strokeColorScale((geoPASS+ipFAIL+senderFAIL+dmarcFAIL)*progressScale(progress))
+          , lineWidth = stateFunc.data.simSetup.lineWidth*stateFunc.data.lineWidthFactor
+          , lineDash = [];
+        drawMethod(filter, logicType, lineWidth, lineDash, fillColor, strokeColor);
+        var logicType = "none"
+          , filter = d => ((d.intel.geo==geoPASS)&(d.intel.ipRep==ipFAIL)&(d.intel.sender==senderFAIL)&(d.intel.dmarc==dmarcPASS))
+          , fillColor = progress => stateFunc.data.intelColorScale((geoPASS+ipFAIL+senderFAIL+ dmarcPASS)*progressScale(progress))
+          , strokeColor = progress => stateFunc.data.strokeColorScale((geoPASS+ipFAIL+senderFAIL+ dmarcPASS)*progressScale(progress))
+          , lineWidth = stateFunc.data.simSetup.lineWidth*stateFunc.data.lineWidthFactor
+          , lineDash = [];
+        drawMethod(filter, logicType, lineWidth, lineDash, fillColor, strokeColor);
+        // color nodes w/ ipRep and not sender
+        var logicType = "none"
+          , filter = d => ((d.intel.geo==geoFAIL)&(d.intel.ipRep==ipPASS)&(d.intel.sender==senderFAIL)&(d.intel.dmarc==dmarcFAIL))
+          , fillColor = progress => stateFunc.data.intelColorScale((geoFAIL+ipPASS+senderFAIL+ dmarcFAIL)*progressScale(progress))
+          , strokeColor = progress => stateFunc.data.strokeColorScale((geoFAIL+ipPASS+senderFAIL+ dmarcFAIL)*progressScale(progress))
+          , lineWidth = stateFunc.data.simSetup.lineWidth*stateFunc.data.lineWidthFactor
+          , lineDash = [];
+        drawMethod(filter, logicType, lineWidth, lineDash, fillColor, strokeColor);
+        var logicType = "none"
+          , filter = d => ((d.intel.geo==geoFAIL)&(d.intel.ipRep==ipPASS)&(d.intel.sender==senderFAIL)&(d.intel.dmarc==dmarcPASS))
+          , fillColor = progress => stateFunc.data.intelColorScale((geoFAIL+ipPASS+senderFAIL+ dmarcPASS)*progressScale(progress))
+          , strokeColor = progress => stateFunc.data.strokeColorScale((geoFAIL+ipPASS+senderFAIL+ dmarcPASS)*progressScale(progress))
+          , lineWidth = stateFunc.data.simSetup.lineWidth*stateFunc.data.lineWidthFactor
+          , lineDash = [];
+        drawMethod(filter, logicType, lineWidth, lineDash, fillColor, strokeColor);
+        // color nodes w/ geo and sender
+        var logicType = "none"
+          , filter = d => ((d.intel.geo==geoPASS)&(d.intel.ipRep==ipFAIL)&(d.intel.sender==senderPASS)&(d.intel.dmarc==dmarcFAIL))
+          , fillColor = progress => stateFunc.data.intelColorScale((geoPASS+ipFAIL+senderPASS+ dmarcFAIL)*progressScale(progress))
+          , strokeColor = progress => stateFunc.data.strokeColorScale((geoPASS+ipFAIL+senderPASS+ dmarcFAIL)*progressScale(progress))
+          , lineWidth = stateFunc.data.simSetup.lineWidth*stateFunc.data.lineWidthFactor
+          , lineDash = [];
+        drawMethod(filter, logicType, lineWidth, lineDash, fillColor, strokeColor);
+        var logicType = "none"
+          , filter = d => ((d.intel.geo==geoPASS)&(d.intel.ipRep==ipFAIL)&(d.intel.sender==senderPASS)&(d.intel.dmarc==dmarcPASS))
+          , fillColor = progress => stateFunc.data.intelColorScale((geoPASS+ipFAIL+senderPASS+ dmarcPASS)*progressScale(progress))
+          , strokeColor = progress => stateFunc.data.strokeColorScale((geoPASS+ipFAIL+senderPASS+ dmarcPASS)*progressScale(progress))
+          , lineWidth = stateFunc.data.simSetup.lineWidth*stateFunc.data.lineWidthFactor
+          , lineDash = [];
+        drawMethod(filter, logicType, lineWidth, lineDash, fillColor, strokeColor);
+        // color nodes w/ rep and sender
+        var logicType = "none"
+          , filter = d => ((d.intel.geo==geoFAIL)&(d.intel.ipRep==ipPASS)&(d.intel.sender==senderPASS)&(d.intel.dmarc==dmarcFAIL))
+          , fillColor = progress => stateFunc.data.intelColorScale((geoFAIL+ipPASS+senderPASS+ dmarcFAIL)*progressScale(progress))
+          , strokeColor = progress => stateFunc.data.strokeColorScale((geoFAIL+ipPASS+senderPASS+ dmarcFAIL)*progressScale(progress))
+          , lineWidth = stateFunc.data.simSetup.lineWidth*stateFunc.data.lineWidthFactor
+          , lineDash = [];
+        drawMethod(filter, logicType, lineWidth, lineDash, fillColor, strokeColor);
+        var logicType = "none"
+          , filter = d => ((d.intel.geo==geoFAIL)&(d.intel.ipRep==ipPASS)&(d.intel.sender==senderPASS)&(d.intel.dmarc==dmarcPASS))
+          , fillColor = progress => stateFunc.data.intelColorScale((geoFAIL+ipPASS+senderPASS+ dmarcPASS)*progressScale(progress))
+          , strokeColor = progress => stateFunc.data.strokeColorScale((geoFAIL+ipPASS+senderPASS+ dmarcPASS)*progressScale(progress))
+          , lineWidth = stateFunc.data.simSetup.lineWidth*stateFunc.data.lineWidthFactor
+          , lineDash = [];
+        drawMethod(filter, logicType, lineWidth, lineDash, fillColor, strokeColor);
+        // color nodes that have both geo and ipRep and not sender
+        var logicType = "none"
+          , filter = d => ((d.intel.geo==geoPASS)&(d.intel.ipRep==ipPASS)&(d.intel.sender==senderFAIL)&(d.intel.dmarc==dmarcFAIL))
+          , fillColor = progress => stateFunc.data.intelColorScale((geoPASS+ipPASS+senderFAIL+ dmarcFAIL)*progressScale(progress))
+          , strokeColor = progress => stateFunc.data.strokeColorScale((geoPASS+ipPASS+senderFAIL+ dmarcFAIL)*progressScale(progress))
+          , lineWidth = stateFunc.data.simSetup.lineWidth*stateFunc.data.lineWidthFactor
+          , lineDash = [];
+        drawMethod(filter, logicType, lineWidth, lineDash, fillColor, strokeColor);
+        var logicType = "none"
+          , filter = d => ((d.intel.geo==geoPASS)&(d.intel.ipRep==ipPASS)&(d.intel.sender==senderFAIL)&(d.intel.dmarc==dmarcPASS))
+          , fillColor = progress => stateFunc.data.intelColorScale((geoPASS+ipPASS+senderFAIL+ dmarcPASS)*progressScale(progress))
+          , strokeColor = progress => stateFunc.data.strokeColorScale((geoPASS+ipPASS+senderFAIL+ dmarcPASS)*progressScale(progress))
+          , lineWidth = stateFunc.data.simSetup.lineWidth*stateFunc.data.lineWidthFactor
+          , lineDash = [];
+        drawMethod(filter, logicType, lineWidth, lineDash, fillColor, strokeColor);
+        // color nodes that have (both geo and ipRep) and sender
+        var logicType = "none"
+          , filter = d => ((d.intel.geo==geoPASS)&(d.intel.ipRep==ipPASS)&(d.intel.sender==senderPASS)&(d.intel.dmarc==dmarcFAIL))
+          , fillColor = progress => stateFunc.data.intelColorScale((geoPASS+ipPASS+senderPASS+ dmarcFAIL)*progressScale(progress))
+          , strokeColor = progress => stateFunc.data.strokeColorScale((geoPASS+ipPASS+senderPASS+ dmarcFAIL)*progressScale(progress))
+          , lineWidth = stateFunc.data.simSetup.lineWidth*stateFunc.data.lineWidthFactor
+          , lineDash = [];
+        drawMethod(filter, logicType, lineWidth, lineDash, fillColor, strokeColor);
+        var logicType = "none"
+          , filter = d => ((d.intel.geo==geoPASS)&(d.intel.ipRep==ipPASS)&(d.intel.sender==senderPASS)&(d.intel.dmarc==dmarcPASS))
+          , fillColor = progress => stateFunc.data.intelColorScale((geoPASS+ipPASS+senderPASS+ dmarcPASS)*progressScale(progress))
+          , strokeColor = progress => stateFunc.data.strokeColorScale((geoPASS+ipPASS+senderPASS+ dmarcPASS)*progressScale(progress))
+          , lineWidth = stateFunc.data.simSetup.lineWidth*stateFunc.data.lineWidthFactor
+          , lineDash = [];
+        drawMethod(filter, logicType, lineWidth, lineDash, fillColor, strokeColor);
+        // color nodes that have (neither geo nor ipRep), but do have sender
+        var logicType = "none"
+          , filter = d => ((d.intel.geo==geoFAIL)&(d.intel.ipRep==ipFAIL)&(d.intel.sender==senderPASS)&(d.intel.dmarc==dmarcFAIL))
+          , fillColor = progress => stateFunc.data.intelColorScale((geoFAIL+ipFAIL+senderPASS+ dmarcFAIL)*progressScale(progress))
+          , strokeColor = progress => stateFunc.data.strokeColorScale((geoFAIL+ipFAIL+senderPASS+ dmarcFAIL)*progressScale(progress))
+          , lineWidth = stateFunc.data.simSetup.lineWidth*stateFunc.data.lineWidthFactor
+          , lineDash = [];
+        drawMethod(filter, logicType, lineWidth, lineDash, fillColor, strokeColor);
+        var logicType = "none"
+          , filter = d => ((d.intel.geo==geoFAIL)&(d.intel.ipRep==ipFAIL)&(d.intel.sender==senderPASS)&(d.intel.dmarc==dmarcPASS))
+          , fillColor = progress => stateFunc.data.intelColorScale((geoFAIL+ipFAIL+senderPASS+ dmarcPASS)*progressScale(progress))
+          , strokeColor = progress => stateFunc.data.strokeColorScale((geoFAIL+ipFAIL+senderPASS+ dmarcPASS)*progressScale(progress))
+          , lineWidth = stateFunc.data.simSetup.lineWidth*stateFunc.data.lineWidthFactor
+          , lineDash = [];
+        drawMethod(filter, logicType, lineWidth, lineDash, fillColor, strokeColor);
+        // color nodes that have both geo and ipRep w/ percentage based logic on scroll
+        var logicType = "none"
+          , filter = d => ((d.intel.geo==geoFAIL)&(d.intel.ipRep==ipFAIL)&(d.intel.sender==senderFAIL)&(d.intel.dmarc==dmarcFAIL))
+          , fillColor = progress => stateFunc.data.intelColorScale((geoFAIL+ipFAIL+senderFAIL+ dmarcFAIL)*progressScale(progress))
+          , strokeColor = progress => stateFunc.data.strokeColorScale((geoFAIL+ipFAIL+senderFAIL+ dmarcFAIL)*progressScale(progress))
+          , lineWidth = stateFunc.data.simSetup.lineWidth
+          , lineDash = [];
+        drawMethod(filter, logicType, lineWidth, lineDash, fillColor, strokeColor);
+        var logicType = "none"
+          , filter = d => ((d.intel.geo==geoFAIL)&(d.intel.ipRep==ipFAIL)&(d.intel.sender==senderFAIL)&(d.intel.dmarc==dmarcPASS))
+          , fillColor = progress => stateFunc.data.intelColorScale((geoFAIL+ipFAIL+senderFAIL+ dmarcPASS)*progressScale(progress))
+          , strokeColor = progress => stateFunc.data.strokeColorScale((geoFAIL+ipFAIL+senderFAIL+ dmarcPASS)*progressScale(progress))
+          , lineWidth = stateFunc.data.simSetup.lineWidth
+          , lineDash = [];
+        drawMethod(filter, logicType, lineWidth, lineDash, fillColor, strokeColor);
+
+        ctx.restore();
+      }//colorFullInel__progress
       function colorIPRep(){
         clearSaveTranslateContext();
         for (var i = 0; i < 5; i++) {

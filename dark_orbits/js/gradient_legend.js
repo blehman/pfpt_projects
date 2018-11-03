@@ -94,7 +94,7 @@ stepHandler = {
           .attr("id","gradient-text")
          .append("text")
           .classed("small-size-font general-font-family general-color-font",true)
-          .text("Percent Intel")
+          .text("Percent Confidence")
           .attr("x",(gArray.length/2)+"px")
           .attr("y",(-5)+"px")
           //.style("fill","#bdbdc1")
@@ -111,7 +111,7 @@ stepHandler = {
           .call(gAxis);
       }
       function gUpdate(){
-        var opacity = (stateFunc.data.step < 6)? 0:1;
+        var opacity = (stateFunc.data.step < 3)? 0:1;
         d3.select("#gradient-legend-container")
           .transition()
           .duration(1000)

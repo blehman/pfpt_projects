@@ -96,7 +96,10 @@
   })
 
  // list data files
-  var files = ["data/dark_orbits_v2.csv"]
+ //var loc = window.location.pathname;
+ //var dir = loc.substring(0, loc.lastIndexOf('/'));
+ //console.log(dir)
+  var files = ["../static/data/dark_orbits_v2.csv", "../static/data/dark_orbits_v2.csv"]
     , promises = [];
 
   // get data in v5
